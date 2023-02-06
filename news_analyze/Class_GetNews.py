@@ -33,7 +33,6 @@ def make_backup() -> bool:
             serial_number = line.split(":")[1].strip()
             print("Serial Number:", serial_number)
             break
-    serial_number = "0"
     if serial_number == "FVFY2HU3HV22":
         current_date = datetime.datetime.now()
         formatted_date = current_date.strftime("%m-%d-%Y")
