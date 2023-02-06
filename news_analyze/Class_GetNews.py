@@ -8,30 +8,51 @@ import datetime
 import shutil
 
 from GoogleNews import GoogleNews
+import subprocess
+
+# get current directory
+path = os.getcwd()
+# prints parent directory
+parent_dic = os.path.abspath(os.path.join(path, os.pardir))
 
 
-def make_backup():
+def make_backup() -> bool:
+    """
+    Please do not call this function, only Fabian is calling it, because the destination folder
+    is somewhere else. But with checking serial number nothing is going to happen.
+    """
 
-    current_date = datetime.datetime.now()
-    formatted_date = current_date.strftime("%m-%d-%Y")
-    src_folder = "/Users/fabian/Desktop/Python/seasonalyze/news_analyze/csv"
-    dst_folder1 = f"/Users/fabian/Desktop/News_Data_Back_Up_Folder/{formatted_date}"
-    dst_folder2 = \
-        f"/Users/fabian/Library/CloudStorage/OneDrive-Persönlich/Fabian/Aktienanalysen" \
-        f"/News_BackUp/{formatted_date} "
+    result = subprocess.run(["system_profiler", "SPHardwareDataType"], capture_output=True,
+                            text=True)
+    hardware_info = result.stdout
+    # just there to be introduced before assignment
+    serial_number = "0"
+    lines = hardware_info.split("\n")
+    for line in lines:
+        if "Serial Number (system):" in line:
+            serial_number = line.split(":")[1].strip()
+            print("Serial Number:", serial_number)
+            break
+    serial_number = "0"
+    if serial_number == "FVFY2HU3HV22":
+        current_date = datetime.datetime.now()
+        formatted_date = current_date.strftime("%m-%d-%Y")
+        src_folder = "/Users/fabian/Desktop/Python/seasonalyze/Stock_News-Analyze/news_analyze/csv"
+        dst_folder1 = f"/Users/fabian/Desktop/News_Data_Back_Up_Folder/{formatted_date}"
 
-    if os.path.exists(dst_folder1):
-        shutil.rmtree(dst_folder1)
-    shutil.copytree(src_folder, dst_folder1)
-
-    if os.path.exists(dst_folder2):
-        shutil.rmtree(dst_folder2)
-    shutil.copytree(src_folder, dst_folder2)
+        if os.path.exists(dst_folder1):
+            shutil.rmtree(dst_folder1)
+        shutil.copytree(src_folder, dst_folder1)
+        return True
+    return False
 
 
 def call_news_class():
-
-    with open("/Users/fabian/Desktop/Python/seasonalyze/news_analyze/companies.txt", 'r') \
+    """
+    Function to get create for every entry in the txt a News object load all news and save them
+    in a csv
+    """
+    with open(f"{parent_dic}/news_analyze/companies.txt", 'r') \
             as csv_file:
         companies_as_csv = csv_file.readlines()
         companies = []
@@ -100,7 +121,7 @@ class News:
         if self.name is None:
             self.name = "General"
 
-        path = f"/Users/fabian/Desktop/Python/seasonalyze/news_analyze/csv/{self.name}.csv"
+        path = f"{parent_dic}/news_analyze/csv/{self.name}.csv"
 
         if os.path.exists(path):
 
@@ -132,7 +153,8 @@ class News:
 
 if __name__ == '__main__':
 
-    make_backup()
-    exit()
-    call_news_class()
-    make_backup()
+    if make_backup() is False:
+        print(Warning("You entered with the wrong device to make a backup.\nNo Backup has been "
+                      "done!!!"))
+    if input("1 get all news") == "1":
+        call_news_class()

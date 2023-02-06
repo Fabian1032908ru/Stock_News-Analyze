@@ -4,10 +4,15 @@ Testing
 
 from Stock_Class import Stock
 from Stock_Class_Bundel import Stock_analyze_bundel
+import os
+
+# get current directory
+path = os.getcwd()
+# prints parent directory
+parent_dic = os.path.abspath(os.path.join(path, os.pardir))
 
 dax = Stock_analyze_bundel(index_name="Dax")
-dax_stocks = dax.read_all_csv_from_folder(
-    "/Users/fabian/Desktop/Python/seasonalyze/csv")
+dax_stocks = dax.read_all_csv_from_folder(f"{parent_dic}/csv")
 dax.append_stocks(dax_stocks)
 print(dax.return_stocks())
 dax_stocks_list = []
@@ -18,9 +23,9 @@ for stock_val in dax_stocks:
     dax_stocks_list.append(Stock(stock=stock_val[0:len(stock_val) - 4]))
 
 for index, stocks in enumerate(dax_stocks_list):
-    ger_or_us = stocks.check_csv_format('/Users/fabian/Desktop/Python/seasonalyze/csv/' +
+    ger_or_us = stocks.check_csv_format(f"{parent_dic}/csv/" +
                                         dax_stocks[index])
-    values = stocks.read_csv('/Users/fabian/Desktop/Python/seasonalyze/csv/' + dax_stocks[index])
+    values = stocks.read_csv(f"{parent_dic}/csv/" + dax_stocks[index])
 
     print(f"NO {index}")
 
@@ -49,7 +54,7 @@ adidas = Stock()
 adidas.edit_name("Apple")
 print(adidas)
 
-values = adidas.read_csv('/Users/fabian/Desktop/Python/seasonalyze/csv/Apple_Nasdaq.txt')
+values = adidas.read_csv(f'{parent_dic}/csv/Apple_Nasdaq.txt')
 final_val = adidas.get_closing_courses_if_us(values)
 final_val = adidas.replace_comma_dot(final_val)
 first_year = adidas.get_first_year(final_val)

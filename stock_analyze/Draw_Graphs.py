@@ -5,6 +5,12 @@ Class to get data and then draw a Graph
 from abc import abstractmethod
 import matplotlib.pyplot as plt
 import numpy as np
+import os
+
+# get current directory
+path = os.getcwd()
+# prints parent directory
+parent_dic = os.path.abspath(os.path.join(path, os.pardir))
 
 
 class Graph():
@@ -62,6 +68,7 @@ class Graph():
 
         if save_picture:
             print("Test123")
-            plt.savefig(f"/Users/fabian/Desktop/Python/seasonalyze/saved_pngs/{self.name}.{save_format}")
+            plt.savefig(f"{parent_dic}/saved_pngs/"
+                        f"{self.name}.{save_format}")
         else:
             plt.show()
