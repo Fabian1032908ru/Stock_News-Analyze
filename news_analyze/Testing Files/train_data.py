@@ -3,6 +3,9 @@ Train data
 """
 
 train_data_str = [
+
+    "Samsung made bankruptcy",
+
     "Samsung declares bankruptcy",
     "Samsung on the brink: Stock prices plummet",
     "Samsung announces mass lay-offs amid financial crisis",
@@ -42,8 +45,8 @@ train_data_str = [
 
 ]
 train_data_int = [
-    -1, -1, -1, -1, 5, 1, 0, 2, 1, 1, 60, 70, 50, 30, 44, 42, 38, 72, 65, 55, 61, 66, 53, 81, 57,
-    59, 52, 49, 45, 43
+    -1, -1, -1, -1, -1, 5, 1, 0, 2, 1, 1, 60, 70, 50, 30, 44, 42, 38, 72, 65, 55, 61, 66, 53, 81,
+    57, 59, 52, 49, 45, 43
 ]
 print(len(train_data_int))
 print(len(train_data_str))

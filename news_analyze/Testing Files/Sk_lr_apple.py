@@ -6,7 +6,7 @@ import string
 import nltk
 from nltk.corpus import stopwords
 from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LogisticRegression, LinearRegression
+from sklearn.linear_model import LinearRegression
 
 from train_data import train_data_str, train_data_int
 
@@ -41,7 +41,7 @@ for v in values:
     text = text.lower().strip()
     final_values.append(text)
 
-final_values.append("Apple declares bankruptcy")
+final_values.append("Apple has bankruptcy")
 
 vectorizer = TfidfVectorizer()
 train_data = vectorizer.fit_transform(train_data_str)
