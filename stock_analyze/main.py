@@ -1,6 +1,7 @@
 """
 Testing
 """
+import sys
 
 from Stock_Class import Stock
 from Stock_Class_Bundel import Stock_analyze_bundel
@@ -26,7 +27,7 @@ for index, stocks in enumerate(dax_stocks_list):
     ger_or_us = stocks.check_csv_format(f"{parent_dic}/csv/" +
                                         dax_stocks[index])
     values = stocks.read_csv(f"{parent_dic}/csv/" + dax_stocks[index])
-
+    print(sys.getsizeof(values), "Size of current Stock, named:")
     print(f"NO {index}")
 
     if ger_or_us:
