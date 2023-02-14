@@ -99,6 +99,7 @@ class Stock(Securities, Graph):
         calendar_val = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
         result = [[[[[], []] for _ in range(31)] for _ in range(12)] for _ in range(252)]
         for current_year in range(int(first_year) + 1, 2022):
+            print(current_year)
             for index_buy_month, buy_month in enumerate(calendar_val):
                 for buy_day in range(buy_month):
                     buy_value = None
@@ -126,6 +127,7 @@ class Stock(Securities, Graph):
                                 result[dif][index_buy_month][buy_day][0].append(buy_value)
                                 result[dif][index_buy_month][buy_day][1].append(sell_value)
                             break
+
         buy_or_not = []
         for difs in result:
             for month in difs:

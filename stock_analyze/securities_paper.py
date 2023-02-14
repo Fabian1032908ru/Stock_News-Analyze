@@ -88,6 +88,19 @@ class Securities(ABC):
 
         return final_courses
 
+    def get_closing_courses_if_yahoo(self, values):
+        final_courses = []
+        for value in values:
+            calc = value[0].split("-")
+            day = int(calc[2])
+            month = int(calc[1])
+            year = int(calc[0])
+            course = value[1]
+            final_courses.append({"day": day, "month": month, "year": year,
+                                      "closing_course": course})
+
+        return final_courses
+
     @abstractmethod
     def check_csv_format(self, path: str) -> bool:
         """

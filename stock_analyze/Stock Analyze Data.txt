@@ -1,370 +1,144 @@
 
 
-Folgend die Daten der BASF_Xetra0: [0.9032258064516129, {'day': 19.0, 'month': 3.0, 'year': 1991.0, 'closing_course': 6.0767}, {'day': 12.0, 'month': 4.0, 'year': 1991.0, 'closing_course': 6.09716}]
-1: [0.9032258064516129, {'day': 18.0, 'month': 2.0, 'year': 1991.0, 'closing_course': 5.96933}, {'day': 29.0, 'month': 4.0, 'year': 1991.0, 'closing_course': 6.65446}]
-2: [0.9032258064516129, {'day': 10.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 6.18919}, {'day': 1.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 5.61398}]
-3: [0.9032258064516129, {'day': 10.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 6.18919}, {'day': 2.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 5.79038}]
-4: [0.9032258064516129, {'day': 10.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 6.18919}, {'day': 3.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 5.80828}]
-5: [0.9032258064516129, {'day': 10.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 6.18919}, {'day': 7.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 5.75459}]
+Folgend die Daten der BASF_Xetra0: E
+1: n
+2: d
+3: e
 
 
-Folgend die Daten der Bayer_Xetra0: [0.9032258064516129, {'day': 13.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 13.8268}, {'day': 30.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 13.9677}]
-1: [0.9032258064516129, {'day': 13.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 13.8268}, {'day': 2.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.1992}]
-2: [0.9032258064516129, {'day': 13.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 13.8268}, {'day': 3.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.335}]
-3: [0.9032258064516129, {'day': 13.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 13.8268}, {'day': 6.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.4608}]
-4: [0.9032258064516129, {'day': 26.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 13.9476}, {'day': 6.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.4608}]
-5: [0.9032258064516129, {'day': 11.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 14.4457}, {'day': 15.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.9338}]
-6: [0.9032258064516129, {'day': 11.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 14.4457}, {'day': 16.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.974}]
-7: [0.9032258064516129, {'day': 12.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 14.486}, {'day': 17.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.7325}]
-8: [0.9032258064516129, {'day': 21.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.2998}, {'day': 3.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.335}]
-9: [0.9032258064516129, {'day': 21.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.2998}, {'day': 6.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.4608}]
-10: [0.9032258064516129, {'day': 21.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.2998}, {'day': 6.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.4608}]
-11: [0.9032258064516129, {'day': 17.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.1941}, {'day': 3.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.335}]
-12: [0.9032258064516129, {'day': 18.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.1891}, {'day': 6.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.4608}]
-13: [0.9032258064516129, {'day': 21.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.2998}, {'day': 7.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.4155}]
-14: [0.9032258064516129, {'day': 17.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.1941}, {'day': 6.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.4608}]
-15: [0.9032258064516129, {'day': 18.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.1891}, {'day': 7.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.4155}]
-16: [0.9032258064516129, {'day': 21.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.2998}, {'day': 8.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.33}]
-17: [0.9032258064516129, {'day': 21.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.2998}, {'day': 9.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.335}]
-18: [0.9032258064516129, {'day': 21.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.2998}, {'day': 9.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.335}]
-19: [0.9032258064516129, {'day': 21.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.2998}, {'day': 10.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.4759}]
-20: [0.9032258064516129, {'day': 21.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.2998}, {'day': 10.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.4759}]
-21: [0.9032258064516129, {'day': 25.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.6671}, {'day': 17.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.7325}]
-22: [0.9032258064516129, {'day': 28.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.5011}, {'day': 20.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.7325}]
-23: [0.9032258064516129, {'day': 21.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.2998}, {'day': 14.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.4206}]
-24: [0.9032258064516129, {'day': 21.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.2998}, {'day': 14.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.4206}]
-25: [0.9032258064516129, {'day': 25.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.6671}, {'day': 20.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.7325}]
-26: [0.9032258064516129, {'day': 10.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 14.3702}, {'day': 6.0, 'month': 1.0, 'year': 1992.0, 'closing_course': 14.4608}]
+Folgend die Daten der Bayer_Xetra0: E
+1: n
+2: d
+3: e
 
 
-Folgend die Daten der AMD München
-
-Folgend die Daten der wkn_543900_historic
-
-Folgend die Daten der Allianz_Xetra0: [0.9032258064516129, {'day': 7.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 78.2197}, {'day': 13.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 83.2292}]
-1: [0.9032258064516129, {'day': 2.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 79.2058}, {'day': 12.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 82.9137}]
-2: [0.9032258064516129, {'day': 26.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.1919}, {'day': 21.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 83.2292}]
-3: [0.9032258064516129, {'day': 1.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 80.1525}, {'day': 29.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 84.0181}]
-4: [0.9032258064516129, {'day': 13.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 78.2591}, {'day': 15.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 84.5309}]
-5: [0.9032258064516129, {'day': 30.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 79.7581}, {'day': 3.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.2431}]
-6: [0.9032258064516129, {'day': 30.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 79.7581}, {'day': 3.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.2431}]
-7: [0.9032258064516129, {'day': 1.0, 'month': 10.0, 'year': 1991.0, 'closing_course': 80.1525}, {'day': 4.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.9531}]
-8: [0.9032258064516129, {'day': 13.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 78.2591}, {'day': 19.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 83.4265}]
-9: [0.9032258064516129, {'day': 25.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.6258}, {'day': 29.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 84.0181}]
-10: [0.9032258064516129, {'day': 26.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.1919}, {'day': 2.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.5192}]
-11: [0.9032258064516129, {'day': 27.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.1525}, {'day': 3.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.2431}]
-12: [0.9032258064516129, {'day': 30.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 79.7581}, {'day': 4.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.9531}]
-13: [0.9032258064516129, {'day': 30.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 79.7581}, {'day': 4.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.9531}]
-14: [0.9354838709677419, {'day': 13.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 78.2591}, {'day': 20.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 83.4265}]
-15: [0.9032258064516129, {'day': 25.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.6258}, {'day': 2.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.5192}]
-16: [0.9032258064516129, {'day': 26.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.1919}, {'day': 3.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.2431}]
-17: [0.9032258064516129, {'day': 27.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.1525}, {'day': 4.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.9531}]
-18: [0.9032258064516129, {'day': 30.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 79.7581}, {'day': 5.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.0459}]
-19: [0.9032258064516129, {'day': 30.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 79.7581}, {'day': 5.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.0459}]
-20: [0.9032258064516129, {'day': 23.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 79.3242}, {'day': 29.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 84.0181}]
-21: [0.9032258064516129, {'day': 24.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 79.7581}, {'day': 2.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.5192}]
-22: [0.9032258064516129, {'day': 25.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.6258}, {'day': 3.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.2431}]
-23: [0.9032258064516129, {'day': 26.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.1919}, {'day': 4.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.9531}]
-24: [0.9032258064516129, {'day': 27.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.1525}, {'day': 5.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.0459}]
-25: [0.9032258064516129, {'day': 30.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 79.7581}, {'day': 6.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.6375}]
-26: [0.9032258064516129, {'day': 17.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.9414}, {'day': 26.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 84.097}]
-27: [0.9354838709677419, {'day': 18.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.7047}, {'day': 27.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 84.6098}]
-28: [0.9032258064516129, {'day': 25.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.6258}, {'day': 4.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.9531}]
-29: [0.9032258064516129, {'day': 26.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.1919}, {'day': 5.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.0459}]
-30: [0.9032258064516129, {'day': 27.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.1525}, {'day': 6.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.6375}]
-31: [0.9032258064516129, {'day': 30.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 79.7581}, {'day': 9.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 83.3081}]
-32: [0.9032258064516129, {'day': 13.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 78.2591}, {'day': 25.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 83.1503}]
-33: [0.9032258064516129, {'day': 16.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.1919}, {'day': 26.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 84.097}]
-34: [0.9032258064516129, {'day': 17.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.9414}, {'day': 27.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 84.6098}]
-35: [0.9032258064516129, {'day': 24.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 79.7581}, {'day': 4.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.9531}]
-36: [0.9032258064516129, {'day': 25.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.6258}, {'day': 5.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.0459}]
-37: [0.9032258064516129, {'day': 12.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 77.983}, {'day': 25.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 83.1503}]
-38: [0.9032258064516129, {'day': 13.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 78.2591}, {'day': 26.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 84.097}]
-39: [0.9032258064516129, {'day': 16.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.1919}, {'day': 27.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 84.6098}]
-40: [0.9032258064516129, {'day': 17.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.9414}, {'day': 28.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 84.6492}]
-41: [0.9032258064516129, {'day': 18.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.7047}, {'day': 29.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 84.0181}]
-42: [0.9032258064516129, {'day': 19.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.1525}, {'day': 2.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.5192}]
-43: [0.9032258064516129, {'day': 23.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 79.3242}, {'day': 4.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.9531}]
-44: [0.9032258064516129, {'day': 24.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 79.7581}, {'day': 5.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.0459}]
-45: [0.9354838709677419, {'day': 17.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.9414}, {'day': 29.0, 'month': 11.0, 'year': 1991.0, 'closing_course': 84.0181}]
-46: [0.9354838709677419, {'day': 18.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.7047}, {'day': 2.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.5192}]
-47: [0.9032258064516129, {'day': 19.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 80.1525}, {'day': 3.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.2431}]
-48: [0.9032258064516129, {'day': 20.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 79.5608}, {'day': 4.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.9531}]
-49: [0.9032258064516129, {'day': 23.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 79.3242}, {'day': 5.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.0459}]
-50: [0.9032258064516129, {'day': 23.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 79.3242}, {'day': 5.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.0459}]
-51: [0.9032258064516129, {'day': 30.0, 'month': 9.0, 'year': 1991.0, 'closing_course': 79.7581}, {'day': 12.0, 'month': 12.0, 'year': 1991.0, 'closing_course': 82.4403}]
+Folgend die Daten der AMD München0: E
+1: n
+2: d
+3: e
 
 
-Folgend die Daten der Adidas_Xetra0: [0.9230769230769231, {'day': 12.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.565}, {'day': 23.0, 'month': 4.0, 'year': 1996.0, 'closing_course': 14.6741}]
-1: [0.9230769230769231, {'day': 20.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.6545}, {'day': 3.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.147}]
-2: [0.9230769230769231, {'day': 21.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.8206}, {'day': 6.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.3388}]
-3: [0.9615384615384616, {'day': 13.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.1432}, {'day': 2.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.85}]
-4: [0.9230769230769231, {'day': 12.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.565}, {'day': 2.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.85}]
-5: [0.9615384615384616, {'day': 13.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.1432}, {'day': 3.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.147}]
-6: [0.9615384615384616, {'day': 13.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.1432}, {'day': 6.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.3388}]
-7: [0.9230769230769231, {'day': 12.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.565}, {'day': 6.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.3388}]
-8: [0.9615384615384616, {'day': 13.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.1432}, {'day': 7.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.7734}]
-9: [0.9230769230769231, {'day': 14.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.1048}, {'day': 8.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.2109}]
-10: [0.9230769230769231, {'day': 13.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.1432}, {'day': 8.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.2109}]
-11: [0.9230769230769231, {'day': 12.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.565}, {'day': 8.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.2109}]
-12: [0.9230769230769231, {'day': 11.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.2454}, {'day': 8.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.2109}]
-13: [0.9230769230769231, {'day': 14.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.1048}, {'day': 13.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.1087}]
-14: [0.9230769230769231, {'day': 6.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 11.7597}, {'day': 6.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.3388}]
-15: [0.9230769230769231, {'day': 8.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.7184}, {'day': 8.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.2109}]
-16: [0.9230769230769231, {'day': 13.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.1432}, {'day': 13.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.1087}]
-17: [0.9230769230769231, {'day': 14.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.1048}, {'day': 14.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.62}]
-18: [0.9230769230769231, {'day': 4.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.5906}, {'day': 3.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.147}]
-19: [0.9230769230769231, {'day': 5.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.271}, {'day': 6.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.3388}]
-20: [0.9230769230769231, {'day': 7.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.2327}, {'day': 8.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.2109}]
-21: [0.9230769230769231, {'day': 8.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.7184}, {'day': 9.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.0831}]
-22: [0.9230769230769231, {'day': 13.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.1432}, {'day': 14.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.62}]
-23: [0.9230769230769231, {'day': 6.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 11.7597}, {'day': 8.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.2109}]
-24: [0.9230769230769231, {'day': 4.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.5906}, {'day': 7.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.7734}]
-25: [0.9230769230769231, {'day': 5.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.271}, {'day': 8.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.2109}]
-26: [0.9230769230769231, {'day': 6.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 11.7597}, {'day': 9.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.0831}]
-27: [0.9230769230769231, {'day': 13.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.1432}, {'day': 16.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.3388}]
-28: [0.9230769230769231, {'day': 4.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.5906}, {'day': 8.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.2109}]
-29: [0.9230769230769231, {'day': 5.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.271}, {'day': 9.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.0831}]
-30: [0.9230769230769231, {'day': 12.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.565}, {'day': 23.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.147}]
-31: [0.9230769230769231, {'day': 13.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.1432}, {'day': 28.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 14.6357}]
-32: [0.9230769230769231, {'day': 4.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.5906}, {'day': 20.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.1854}]
-33: [0.9230769230769231, {'day': 7.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.2327}, {'day': 23.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.147}]
-34: [0.9230769230769231, {'day': 4.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.5906}, {'day': 23.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 15.147}]
-35: [0.9230769230769231, {'day': 7.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.2327}, {'day': 28.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 14.6357}]
-36: [0.9230769230769231, {'day': 6.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 11.7597}, {'day': 28.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 14.6357}]
-37: [0.9230769230769231, {'day': 5.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.271}, {'day': 28.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 14.6357}]
-38: [0.9230769230769231, {'day': 4.0, 'month': 3.0, 'year': 1996.0, 'closing_course': 12.5906}, {'day': 28.0, 'month': 5.0, 'year': 1996.0, 'closing_course': 14.6357}]
+Folgend die Daten der wkn_543900_historic0: E
+1: n
+2: d
+3: e
 
 
-Folgend die Daten der wkn_552484_historic0: [0.9473684210526315, {'day': 20.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.76786}, {'day': 3.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.87143}]
-1: [0.9473684210526315, {'day': 14.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82143}, {'day': 29.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82857}]
-2: [0.9473684210526315, {'day': 20.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.76786}, {'day': 4.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.86429}]
-3: [0.9473684210526315, {'day': 14.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82143}, {'day': 31.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82857}]
-4: [0.9473684210526315, {'day': 20.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.76786}, {'day': 6.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.79286}]
-5: [0.9473684210526315, {'day': 20.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.76786}, {'day': 7.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.77143}]
-6: [0.9473684210526315, {'day': 20.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.76786}, {'day': 10.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.80714}]
-7: [0.9473684210526315, {'day': 20.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.76786}, {'day': 11.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.83571}]
-8: [0.9473684210526315, {'day': 17.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.80714}, {'day': 11.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.83571}]
-9: [0.9473684210526315, {'day': 20.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.76786}, {'day': 12.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.86429}]
-10: [0.9473684210526315, {'day': 16.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82857}, {'day': 11.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.83571}]
-11: [0.9473684210526315, {'day': 20.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.76786}, {'day': 13.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.87857}]
-12: [0.9473684210526315, {'day': 15.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82143}, {'day': 11.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.83571}]
-13: [0.9473684210526315, {'day': 16.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82857}, {'day': 12.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.86429}]
-14: [0.9473684210526315, {'day': 17.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.80714}, {'day': 13.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.87857}]
-15: [0.9473684210526315, {'day': 14.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82143}, {'day': 11.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.83571}]
-16: [0.9473684210526315, {'day': 13.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.83571}, {'day': 13.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.87857}]
-17: [0.9473684210526315, {'day': 14.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82143}, {'day': 14.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.87143}]
-18: [0.9473684210526315, {'day': 13.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.83571}, {'day': 14.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.87143}]
-19: [0.9473684210526315, {'day': 13.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.83571}, {'day': 14.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.87143}]
-20: [0.9473684210526315, {'day': 13.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.83571}, {'day': 17.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.95}]
-21: [0.9473684210526315, {'day': 13.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.83571}, {'day': 17.0, 'month': 2.0, 'year': 2003.0, 'closing_course': 0.95}]
-22: [0.9473684210526315, {'day': 21.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.78571}, {'day': 3.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.34214}]
-23: [0.9473684210526315, {'day': 15.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82143}, {'day': 31.0, 'month': 3.0, 'year': 2003.0, 'closing_course': 1.37143}]
-24: [0.9473684210526315, {'day': 21.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.78571}, {'day': 4.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.35786}]
-25: [0.9473684210526315, {'day': 22.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.75}, {'day': 7.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.41429}]
-26: [0.9473684210526315, {'day': 15.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82143}, {'day': 1.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.32143}]
-27: [0.9473684210526315, {'day': 21.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.78571}, {'day': 7.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.41429}]
-28: [0.9473684210526315, {'day': 22.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.75}, {'day': 8.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.34286}]
-29: [0.9473684210526315, {'day': 13.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.83571}, {'day': 31.0, 'month': 3.0, 'year': 2003.0, 'closing_course': 1.37143}]
-30: [0.9473684210526315, {'day': 15.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82143}, {'day': 2.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.27143}]
-31: [0.9473684210526315, {'day': 21.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.78571}, {'day': 8.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.34286}]
-32: [0.9473684210526315, {'day': 22.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.75}, {'day': 9.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.34286}]
-33: [0.9473684210526315, {'day': 13.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.83571}, {'day': 1.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.32143}]
-34: [0.9473684210526315, {'day': 15.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82143}, {'day': 3.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.34214}]
-35: [0.9473684210526315, {'day': 20.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.76786}, {'day': 8.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.34286}]
-36: [0.9473684210526315, {'day': 21.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.78571}, {'day': 9.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.34286}]
-37: [0.9473684210526315, {'day': 13.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.83571}, {'day': 2.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.27143}]
-38: [0.9473684210526315, {'day': 13.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.83571}, {'day': 2.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.27143}]
-39: [0.9473684210526315, {'day': 14.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82143}, {'day': 3.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.34214}]
-40: [0.9473684210526315, {'day': 15.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82143}, {'day': 4.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.35786}]
-41: [0.9473684210526315, {'day': 16.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82857}, {'day': 7.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.41429}]
-42: [0.9473684210526315, {'day': 17.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.80714}, {'day': 8.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.34286}]
-43: [0.9473684210526315, {'day': 13.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.83571}, {'day': 3.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.34214}]
-44: [0.9473684210526315, {'day': 14.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82143}, {'day': 4.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.35786}]
-45: [0.9473684210526315, {'day': 15.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82143}, {'day': 7.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.41429}]
-46: [0.9473684210526315, {'day': 16.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.82857}, {'day': 8.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.34286}]
-47: [0.9473684210526315, {'day': 20.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.76786}, {'day': 10.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.35357}]
-48: [0.9473684210526315, {'day': 20.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.76786}, {'day': 10.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.35357}]
-49: [0.9473684210526315, {'day': 20.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.76786}, {'day': 10.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.35357}]
-50: [0.9473684210526315, {'day': 21.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.78571}, {'day': 11.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.37857}]
-51: [0.9473684210526315, {'day': 13.0, 'month': 1.0, 'year': 2003.0, 'closing_course': 0.83571}, {'day': 4.0, 'month': 4.0, 'year': 2003.0, 'closing_course': 1.35786}]
+Folgend die Daten der Allianz_Xetra0: E
+1: n
+2: d
+3: e
 
 
-Folgend die Daten der wkn_555200_historic0: [0.9047619047619048, {'day': 13.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 15.47}, {'day': 2.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 14.78}]
-1: [0.9047619047619048, {'day': 28.0, 'month': 11.0, 'year': 2001.0, 'closing_course': 15.66}, {'day': 4.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 15.74}]
-2: [0.9047619047619048, {'day': 30.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 15.65}, {'day': 9.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 16.1}]
-3: [0.9047619047619048, {'day': 31.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 15.96}, {'day': 10.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 16.35}]
-4: [0.9047619047619048, {'day': 29.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 15.54}, {'day': 14.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 16.22}]
-5: [0.9047619047619048, {'day': 29.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 15.54}, {'day': 15.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 16.39}]
-6: [0.9047619047619048, {'day': 29.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 15.54}, {'day': 16.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 15.95}]
+Folgend die Daten der Adidas_Xetra0: E
+1: n
+2: d
+3: e
 
 
-Folgend die Daten der HP_Hamburg
-
-Folgend die Daten der wkn_514000_historic
-
-Folgend die Daten der Airbus_Xetra0: [0.9047619047619048, {'day': 23.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.9}, {'day': 12.0, 'month': 11.0, 'year': 2001.0, 'closing_course': 13.75}]
-1: [0.9047619047619048, {'day': 23.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.9}, {'day': 13.0, 'month': 11.0, 'year': 2001.0, 'closing_course': 13.74}]
-2: [0.9047619047619048, {'day': 24.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 13.21}, {'day': 14.0, 'month': 11.0, 'year': 2001.0, 'closing_course': 13.95}]
-3: [0.9047619047619048, {'day': 8.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 11.0}, {'day': 9.0, 'month': 11.0, 'year': 2001.0, 'closing_course': 14.2}]
-4: [0.9047619047619048, {'day': 9.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 11.0}, {'day': 13.0, 'month': 11.0, 'year': 2001.0, 'closing_course': 13.74}]
-5: [0.9047619047619048, {'day': 22.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.35}, {'day': 18.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 13.97}]
-6: [0.9047619047619048, {'day': 22.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.35}, {'day': 18.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 13.97}]
-7: [0.9047619047619048, {'day': 22.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.35}, {'day': 23.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 13.6}]
-8: [0.9047619047619048, {'day': 15.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.2}, {'day': 17.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 14.09}]
-9: [0.9047619047619048, {'day': 22.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.35}, {'day': 24.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 13.3}]
-10: [0.9047619047619048, {'day': 22.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.35}, {'day': 24.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 13.3}]
-11: [0.9047619047619048, {'day': 15.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.2}, {'day': 18.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 13.97}]
-12: [0.9047619047619048, {'day': 15.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.2}, {'day': 18.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 13.97}]
-13: [0.9047619047619048, {'day': 22.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.35}, {'day': 25.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 13.46}]
-14: [0.9047619047619048, {'day': 22.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.35}, {'day': 29.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 13.05}]
-15: [0.9047619047619048, {'day': 4.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 11.8}, {'day': 17.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 14.09}]
-16: [0.9047619047619048, {'day': 5.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 11.45}, {'day': 18.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 13.97}]
-17: [0.9047619047619048, {'day': 10.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 11.0}, {'day': 23.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 13.6}]
-18: [0.9047619047619048, {'day': 10.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 11.0}, {'day': 24.0, 'month': 1.0, 'year': 2002.0, 'closing_course': 13.3}]
-19: [0.9047619047619048, {'day': 22.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.35}, {'day': 18.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 13.94}]
-20: [0.9047619047619048, {'day': 17.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.44}, {'day': 15.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 13.83}]
-21: [0.9047619047619048, {'day': 18.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.69}, {'day': 18.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 13.94}]
-22: [0.9047619047619048, {'day': 17.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.44}, {'day': 19.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 13.27}]
-23: [0.9047619047619048, {'day': 16.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.1}, {'day': 19.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 13.27}]
-24: [0.9047619047619048, {'day': 15.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 12.2}, {'day': 20.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 13.3}]
-25: [0.9047619047619048, {'day': 2.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 10.9}, {'day': 18.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 13.94}]
-26: [0.9047619047619048, {'day': 2.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 10.9}, {'day': 19.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 13.27}]
+Folgend die Daten der wkn_552484_historic0: E
+1: n
+2: d
+3: e
 
 
-Folgend die Daten der AMD Düsseldorf0: [0.9130434782608695, {'day': 29.0, 'month': 10.0, 'year': 1999.0, 'closing_course': 9.0}, {'day': 9.0, 'month': 11.0, 'year': 1999.0, 'closing_course': 10.25}]
+Folgend die Daten der wkn_555200_historic0: E
+1: n
+2: d
+3: e
 
 
-Folgend die Daten der wkn_590375_historic0: [0.95, {'day': 22.0, 'month': 8.0, 'year': 2002.0, 'closing_course': 2.4}, {'day': 20.0, 'month': 9.0, 'year': 2002.0, 'closing_course': 3.1}]
+Folgend die Daten der HP_Hamburg0: E
+1: n
+2: d
+3: e
 
 
-Folgend die Daten der BMWSt_Xetra
-
-Folgend die Daten der wkn_519000_historic
-
-Folgend die Daten der wkn_578580_historic
-
-Folgend die Daten der wkn_555750_historic
-
-Folgend die Daten der wkn_578560_historic0: [0.9285714285714286, {'day': 9.0, 'month': 3.0, 'year': 1994.0, 'closing_course': 1.77863}, {'day': 6.0, 'month': 5.0, 'year': 1994.0, 'closing_course': 1.94842}]
-1: [0.9285714285714286, {'day': 9.0, 'month': 3.0, 'year': 1994.0, 'closing_course': 1.77863}, {'day': 9.0, 'month': 5.0, 'year': 1994.0, 'closing_course': 1.96234}]
+Folgend die Daten der wkn_514000_historic0: E
+1: n
+2: d
+3: e
 
 
-Folgend die Daten der Apple_Nasdaq0: [0.90625, {'day': 15.0, 'month': 10.0, 'year': 1990.0, 'closing_course': 0.24777}, {'day': 4.0, 'month': 6.0, 'year': 1991.0, 'closing_course': 0.43866}]
-1: [0.90625, {'day': 8.0, 'month': 10.0, 'year': 1990.0, 'closing_course': 0.26}, {'day': 4.0, 'month': 6.0, 'year': 1991.0, 'closing_course': 0.43866}]
-2: [0.90625, {'day': 1.0, 'month': 10.0, 'year': 1990.0, 'closing_course': 0.27232}, {'day': 4.0, 'month': 6.0, 'year': 1991.0, 'closing_course': 0.43866}]
+Folgend die Daten der Airbus_Xetra0: E
+1: n
+2: d
+3: e
 
 
-Folgend die Daten der wkn_604700_historic 20.37.31
-
-Folgend die Daten der wkn_604700_historic-20: [1.0, {'day': 2.0, 'month': 1.0, 'year': 2020.0, 'closing_course': 64.96}, {'day': 9.0, 'month': 1.0, 'year': 2020.0, 'closing_course': 65.92}]
-1: [1.0, {'day': 2.0, 'month': 1.0, 'year': 2020.0, 'closing_course': 64.96}, {'day': 9.0, 'month': 1.0, 'year': 2020.0, 'closing_course': 65.92}]
-2: [1.0, {'day': 3.0, 'month': 1.0, 'year': 2020.0, 'closing_course': 65.04}, {'day': 10.0, 'month': 1.0, 'year': 2020.0, 'closing_course': 65.44}]
-3: [1.0, {'day': 6.0, 'month': 1.0, 'year': 2020.0, 'closing_course': 63.46}, {'day': 13.0, 'month': 1.0, 'year': 2020.0, 'closing_course': 64.02}]
-4: [1.0, {'day': 6.0, 'month': 1.0, 'year': 2020.0, 'closing_course': 63.46}, {'day': 13.0, 'month': 1.0, 'year': 2020.0, 'closing_course': 64.02}]
-5: [1.0, {'day': 6.0, 'month': 1.0, 'year': 2020.0, 'closing_course': 63.46}, {'day': 13.0, 'month': 1.0, 'year': 2020.0, 'closing_course': 64.02}]
-6: [1.0, {'day': 30.0, 'month': 1.0, 'year': 2020.0, 'closing_course': 62.96}, {'day': 6.0, 'month': 2.0, 'year': 2020.0, 'closing_course': 65.12}]
-7: [1.0, {'day': 31.0, 'month': 1.0, 'year': 2020.0, 'closing_course': 61.98}, {'day': 7.0, 'month': 2.0, 'year': 2020.0, 'closing_course': 64.28}]
-8: [1.0, {'day': 3.0, 'month': 2.0, 'year': 2020.0, 'closing_course': 62.2}, {'day': 10.0, 'month': 2.0, 'year': 2020.0, 'closing_course': 63.8}]
-9: [1.0, {'day': 3.0, 'month': 2.0, 'year': 2020.0, 'closing_course': 62.2}, {'day': 10.0, 'month': 2.0, 'year': 2020.0, 'closing_course': 63.8}]
-10: [1.0, {'day': 3.0, 'month': 2.0, 'year': 2020.0, 'closing_course': 62.2}, {'day': 10.0, 'month': 2.0, 'year': 2020.0, 'closing_course': 63.8}]
-11: [1.0, {'day': 4.0, 'month': 2.0, 'year': 2020.0, 'closing_course': 62.02}, {'day': 11.0, 'month': 2.0, 'year': 2020.0, 'closing_course': 64.36}]
-12: [1.0, {'day': 5.0, 'month': 2.0, 'year': 2020.0, 'closing_course': 63.5}, {'day': 12.0, 'month': 2.0, 'year': 2020.0, 'closing_course': 64.62}]
-13: [1.0, {'day': 17.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 35.13}, {'day': 24.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 36.99}]
-14: [1.0, {'day': 18.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 32.36}, {'day': 25.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 36.3}]
-15: [1.0, {'day': 19.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 31.04}, {'day': 26.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 38.72}]
-16: [1.0, {'day': 20.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 33.5}, {'day': 27.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 38.93}]
-17: [1.0, {'day': 23.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 33.51}, {'day': 30.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 37.16}]
-18: [1.0, {'day': 23.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 33.51}, {'day': 30.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 37.16}]
-19: [1.0, {'day': 23.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 33.51}, {'day': 30.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 37.16}]
-20: [1.0, {'day': 24.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 36.99}, {'day': 31.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 38.44}]
-21: [1.0, {'day': 25.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 36.3}, {'day': 1.0, 'month': 4.0, 'year': 2020.0, 'closing_course': 38.55}]
-22: [1.0, {'day': 26.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 38.72}, {'day': 2.0, 'month': 4.0, 'year': 2020.0, 'closing_course': 39.09}]
-23: [1.0, {'day': 30.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 37.16}, {'day': 6.0, 'month': 4.0, 'year': 2020.0, 'closing_course': 40.22}]
-24: [1.0, {'day': 30.0, 'month': 3.0, 'year': 2020.0, 'closing_course': 37.16}, {'day': 6.0, 'month': 4.0, 'year': 2020.0, 'closing_course': 40.22}]
-25: [1.0, {'day': 1.0, 'month': 4.0, 'year': 2020.0, 'closing_course': 38.55}, {'day': 8.0, 'month': 4.0, 'year': 2020.0, 'closing_course': 41.45}]
-26: [1.0, {'day': 2.0, 'month': 4.0, 'year': 2020.0, 'closing_course': 39.09}, {'day': 9.0, 'month': 4.0, 'year': 2020.0, 'closing_course': 44.6}]
-27: [1.0, {'day': 3.0, 'month': 4.0, 'year': 2020.0, 'closing_course': 37.75}, {'day': 14.0, 'month': 4.0, 'year': 2020.0, 'closing_course': 43.49}]
-28: [1.0, {'day': 22.0, 'month': 4.0, 'year': 2020.0, 'closing_course': 39.57}, {'day': 29.0, 'month': 4.0, 'year': 2020.0, 'closing_course': 44.3}]
-29: [1.0, {'day': 28.0, 'month': 4.0, 'year': 2020.0, 'closing_course': 42.2}, {'day': 6.0, 'month': 5.0, 'year': 2020.0, 'closing_course': 42.52}]
-30: [1.0, {'day': 19.0, 'month': 5.0, 'year': 2020.0, 'closing_course': 41.83}, {'day': 26.0, 'month': 5.0, 'year': 2020.0, 'closing_course': 43.53}]
-31: [1.0, {'day': 20.0, 'month': 5.0, 'year': 2020.0, 'closing_course': 41.86}, {'day': 27.0, 'month': 5.0, 'year': 2020.0, 'closing_course': 45.61}]
-32: [1.0, {'day': 21.0, 'month': 5.0, 'year': 2020.0, 'closing_course': 41.14}, {'day': 28.0, 'month': 5.0, 'year': 2020.0, 'closing_course': 46.69}]
-33: [1.0, {'day': 22.0, 'month': 5.0, 'year': 2020.0, 'closing_course': 42.07}, {'day': 29.0, 'month': 5.0, 'year': 2020.0, 'closing_course': 45.37}]
-34: [1.0, {'day': 25.0, 'month': 5.0, 'year': 2020.0, 'closing_course': 41.66}, {'day': 2.0, 'month': 6.0, 'year': 2020.0, 'closing_course': 47.23}]
-35: [1.0, {'day': 25.0, 'month': 5.0, 'year': 2020.0, 'closing_course': 41.66}, {'day': 2.0, 'month': 6.0, 'year': 2020.0, 'closing_course': 47.23}]
-36: [1.0, {'day': 25.0, 'month': 5.0, 'year': 2020.0, 'closing_course': 41.66}, {'day': 2.0, 'month': 6.0, 'year': 2020.0, 'closing_course': 47.23}]
-37: [1.0, {'day': 26.0, 'month': 5.0, 'year': 2020.0, 'closing_course': 43.53}, {'day': 3.0, 'month': 6.0, 'year': 2020.0, 'closing_course': 48.12}]
-38: [1.0, {'day': 27.0, 'month': 5.0, 'year': 2020.0, 'closing_course': 45.61}, {'day': 4.0, 'month': 6.0, 'year': 2020.0, 'closing_course': 50.36}]
-39: [1.0, {'day': 28.0, 'month': 5.0, 'year': 2020.0, 'closing_course': 46.69}, {'day': 5.0, 'month': 6.0, 'year': 2020.0, 'closing_course': 51.5}]
-40: [1.0, {'day': 29.0, 'month': 5.0, 'year': 2020.0, 'closing_course': 45.37}, {'day': 8.0, 'month': 6.0, 'year': 2020.0, 'closing_course': 52.08}]
-41: [1.0, {'day': 2.0, 'month': 6.0, 'year': 2020.0, 'closing_course': 47.23}, {'day': 9.0, 'month': 6.0, 'year': 2020.0, 'closing_course': 49.77}]
-42: [1.0, {'day': 2.0, 'month': 6.0, 'year': 2020.0, 'closing_course': 47.23}, {'day': 9.0, 'month': 6.0, 'year': 2020.0, 'closing_course': 49.77}]
-43: [1.0, {'day': 30.0, 'month': 6.0, 'year': 2020.0, 'closing_course': 47.58}, {'day': 7.0, 'month': 7.0, 'year': 2020.0, 'closing_course': 48.59}]
-44: [1.0, {'day': 1.0, 'month': 7.0, 'year': 2020.0, 'closing_course': 47.29}, {'day': 8.0, 'month': 7.0, 'year': 2020.0, 'closing_course': 48.01}]
-45: [1.0, {'day': 6.0, 'month': 7.0, 'year': 2020.0, 'closing_course': 48.95}, {'day': 13.0, 'month': 7.0, 'year': 2020.0, 'closing_course': 50.72}]
-46: [1.0, {'day': 6.0, 'month': 7.0, 'year': 2020.0, 'closing_course': 48.95}, {'day': 13.0, 'month': 7.0, 'year': 2020.0, 'closing_course': 50.72}]
-47: [1.0, {'day': 6.0, 'month': 7.0, 'year': 2020.0, 'closing_course': 48.95}, {'day': 13.0, 'month': 7.0, 'year': 2020.0, 'closing_course': 50.72}]
-48: [1.0, {'day': 8.0, 'month': 7.0, 'year': 2020.0, 'closing_course': 48.01}, {'day': 15.0, 'month': 7.0, 'year': 2020.0, 'closing_course': 53.22}]
-49: [1.0, {'day': 16.0, 'month': 7.0, 'year': 2020.0, 'closing_course': 52.36}, {'day': 23.0, 'month': 7.0, 'year': 2020.0, 'closing_course': 52.96}]
-50: [1.0, {'day': 30.0, 'month': 7.0, 'year': 2020.0, 'closing_course': 48.81}, {'day': 6.0, 'month': 8.0, 'year': 2020.0, 'closing_course': 50.06}]
-51: [1.0, {'day': 5.0, 'month': 8.0, 'year': 2020.0, 'closing_course': 50.04}, {'day': 12.0, 'month': 8.0, 'year': 2020.0, 'closing_course': 52.66}]
+Folgend die Daten der AMD Düsseldorf0: E
+1: n
+2: d
+3: e
 
 
-Folgend die Daten der wkn_501822_historic0: [0.9047619047619048, {'day': 26.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 28.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.0475}]
-1: [0.9047619047619048, {'day': 24.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 27.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.0475}]
-2: [0.9047619047619048, {'day': 15.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 1.0, 'month': 3.0, 'year': 2002.0, 'closing_course': 0.0475}]
-3: [0.9047619047619048, {'day': 5.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 27.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.0475}]
-4: [0.9047619047619048, {'day': 5.0, 'month': 10.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 28.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.0475}]
-5: [0.9047619047619048, {'day': 20.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.045}, {'day': 22.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.05}]
-6: [0.9047619047619048, {'day': 16.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.042}, {'day': 21.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.05}]
-7: [0.9047619047619048, {'day': 17.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.0435}, {'day': 22.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.05}]
-8: [0.9047619047619048, {'day': 20.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.045}, {'day': 25.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.05}]
-9: [0.9047619047619048, {'day': 20.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.045}, {'day': 25.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.05}]
-10: [0.9047619047619048, {'day': 16.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.042}, {'day': 22.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.05}]
-11: [0.9047619047619048, {'day': 17.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.0435}, {'day': 25.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.05}]
-12: [0.9047619047619048, {'day': 20.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.045}, {'day': 26.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.05}]
-13: [0.9047619047619048, {'day': 20.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.045}, {'day': 26.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.05}]
-14: [0.9047619047619048, {'day': 16.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.042}, {'day': 25.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.05}]
-15: [0.9047619047619048, {'day': 17.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.0435}, {'day': 26.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.05}]
-16: [0.9047619047619048, {'day': 20.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.045}, {'day': 27.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.0475}]
-17: [0.9047619047619048, {'day': 20.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.045}, {'day': 27.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.0475}]
-18: [0.9047619047619048, {'day': 16.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.042}, {'day': 26.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.05}]
-19: [0.9047619047619048, {'day': 17.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.0435}, {'day': 27.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.0475}]
-20: [0.9047619047619048, {'day': 20.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.045}, {'day': 28.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.0475}]
-21: [0.9047619047619048, {'day': 16.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.042}, {'day': 27.0, 'month': 2.0, 'year': 2002.0, 'closing_course': 0.0475}]
-22: [0.9047619047619048, {'day': 20.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.045}, {'day': 1.0, 'month': 3.0, 'year': 2002.0, 'closing_course': 0.0475}]
-23: [0.9047619047619048, {'day': 20.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.045}, {'day': 1.0, 'month': 3.0, 'year': 2002.0, 'closing_course': 0.0475}]
-24: [0.9047619047619048, {'day': 17.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.0435}, {'day': 1.0, 'month': 3.0, 'year': 2002.0, 'closing_course': 0.0475}]
-25: [0.9047619047619048, {'day': 20.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.045}, {'day': 4.0, 'month': 3.0, 'year': 2002.0, 'closing_course': 0.0475}]
-26: [0.9047619047619048, {'day': 16.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.042}, {'day': 11.0, 'month': 3.0, 'year': 2002.0, 'closing_course': 0.045}]
-27: [0.9047619047619048, {'day': 16.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.042}, {'day': 15.0, 'month': 3.0, 'year': 2002.0, 'closing_course': 0.045}]
-28: [0.9047619047619048, {'day': 17.0, 'month': 8.0, 'year': 2001.0, 'closing_course': 0.0435}, {'day': 10.0, 'month': 4.0, 'year': 2002.0, 'closing_course': 0.045}]
-29: [0.9047619047619048, {'day': 28.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 30.0, 'month': 9.0, 'year': 2002.0, 'closing_course': 0.1675}]
-30: [0.9047619047619048, {'day': 27.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 30.0, 'month': 9.0, 'year': 2002.0, 'closing_course': 0.1675}]
-31: [0.9047619047619048, {'day': 31.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 2.0, 'month': 10.0, 'year': 2002.0, 'closing_course': 0.17}]
-32: [0.9047619047619048, {'day': 24.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 26.0, 'month': 9.0, 'year': 2002.0, 'closing_course': 0.165}]
-33: [0.9047619047619048, {'day': 24.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 26.0, 'month': 9.0, 'year': 2002.0, 'closing_course': 0.165}]
-34: [0.9047619047619048, {'day': 25.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 27.0, 'month': 9.0, 'year': 2002.0, 'closing_course': 0.165}]
-35: [0.9047619047619048, {'day': 26.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 30.0, 'month': 9.0, 'year': 2002.0, 'closing_course': 0.1675}]
-36: [0.9047619047619048, {'day': 28.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 2.0, 'month': 10.0, 'year': 2002.0, 'closing_course': 0.17}]
-37: [0.9047619047619048, {'day': 31.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 3.0, 'month': 10.0, 'year': 2002.0, 'closing_course': 0.17}]
-38: [0.9047619047619048, {'day': 24.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 27.0, 'month': 9.0, 'year': 2002.0, 'closing_course': 0.165}]
-39: [0.9047619047619048, {'day': 24.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 27.0, 'month': 9.0, 'year': 2002.0, 'closing_course': 0.165}]
-40: [0.9047619047619048, {'day': 24.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 27.0, 'month': 9.0, 'year': 2002.0, 'closing_course': 0.165}]
-41: [0.9047619047619048, {'day': 27.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 2.0, 'month': 10.0, 'year': 2002.0, 'closing_course': 0.17}]
-42: [0.9047619047619048, {'day': 28.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 3.0, 'month': 10.0, 'year': 2002.0, 'closing_course': 0.17}]
-43: [0.9047619047619048, {'day': 31.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 4.0, 'month': 10.0, 'year': 2002.0, 'closing_course': 0.1525}]
-44: [0.9047619047619048, {'day': 31.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 4.0, 'month': 10.0, 'year': 2002.0, 'closing_course': 0.1525}]
-45: [0.9047619047619048, {'day': 21.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 27.0, 'month': 9.0, 'year': 2002.0, 'closing_course': 0.165}]
-46: [0.9047619047619048, {'day': 25.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 1.0, 'month': 10.0, 'year': 2002.0, 'closing_course': 0.1675}]
-47: [0.9047619047619048, {'day': 26.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 2.0, 'month': 10.0, 'year': 2002.0, 'closing_course': 0.17}]
-48: [0.9047619047619048, {'day': 27.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 3.0, 'month': 10.0, 'year': 2002.0, 'closing_course': 0.17}]
-49: [0.9047619047619048, {'day': 28.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 4.0, 'month': 10.0, 'year': 2002.0, 'closing_course': 0.1525}]
-50: [0.9047619047619048, {'day': 31.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 7.0, 'month': 10.0, 'year': 2002.0, 'closing_course': 0.1}]
-51: [0.9047619047619048, {'day': 31.0, 'month': 12.0, 'year': 2001.0, 'closing_course': 0.034}, {'day': 7.0, 'month': 10.0, 'year': 2002.0, 'closing_course': 0.1}]
+Folgend die Daten der wkn_590375_historic0: E
+1: n
+2: d
+3: e
 
 
-Folgend die Daten der wkn_581005_historic
+Folgend die Daten der BMWSt_Xetra0: E
+1: n
+2: d
+3: e
 
-Folgend die Daten der wkn_157484_historic
+
+Folgend die Daten der wkn_519000_historic0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_578580_historic0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_555750_historic0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_578560_historic0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der Apple_Nasdaq0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_604700_historic 20.37.310: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_604700_historic-20: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_501822_historic0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_581005_historic0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_157484_historic0: E
+1: n
+2: d
+3: e
