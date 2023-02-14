@@ -2,7 +2,7 @@
 | Founder       | Developer     | User          |
 |---------------|---------------|---------------|
 | Fabian Stiewe | Fabian Stiewe | Nicolas Igla  |
-| Nicolas Igla  | Jan Wichmann  | Fabian Stiewe |
+| Nicolas Igla  |               | Fabian Stiewe |
 
 
 # Stock_News-Analyze
