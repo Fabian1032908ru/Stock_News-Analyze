@@ -122,7 +122,7 @@ class Stock(Securities, Graph):
                                 buy_value = value
                         if buy_value is not None:
                             index = values.index(buy_value)
-                            for dif in range(5, 250):
+                            for dif in range(15, 250):
                                 sell_value = values[index - dif]
                                 result[dif][index_buy_month][buy_day][0].append(buy_value)
                                 result[dif][index_buy_month][buy_day][1].append(sell_value)

@@ -1,13 +1,14 @@
 """
 Testing
 """
+import datetime
+import random
 import sys
 
 from Stock_Class import Stock
 from Stock_Class_Bundel import Stock_analyze_bundel
 import yfinance as yf
 import os
-import random
 
 # get current directory
 path = os.getcwd()
@@ -21,6 +22,7 @@ class Ticker:
     """
     def __init__(self):
         self.__ticker_list = self.__get_all_ticker()
+        random.shuffle(self.__ticker_list)
         self.__get_data(analyze=True)
 
     @staticmethod
@@ -44,8 +46,13 @@ class Ticker:
         """
         for index, ticker in enumerate(self.__ticker_list):
             print(ticker[0])
-            data = yf.download(ticker[0], '1970-01-01', '2023-12-31')
+            try:
+                data = yf.download(ticker[0], '1970-01-01', '2023-12-31')
+            except KeyError:
+                print("Not Stock found on yfinance")
             data = data.reset_index()  # len data will be 0 if there is no available data
+            if index > 50:
+                exit()
             if analyze:
                 if len(data) > 500:
                     self.__analyze_data(data, ticker)
@@ -53,12 +60,17 @@ class Ticker:
                     print("Not possible to analyze!!!")
 
     def __analyze_data(self, yfin_data, ticker):
-
+        """
+        Get the data, convert them into the format we need and then analyze them
+        :param yfin_data: data from yahoo finance
+        :param ticker: ticker line of nasdaq list
+        :return: calls write analyze to csv file
+        """
+        print(yfin_data)
         res = []
-
         for step in range(len(yfin_data)):
             date = str(yfin_data["Date"][step])[:10]
-            res.append([date, float(yfin_data["Adj Close"][step])])
+            res.append([date, float(yfin_data["Close"][step])])
 
         test1 = Stock(ticker)
         final_val = test1.get_closing_courses_if_yahoo(res)
@@ -67,16 +79,25 @@ class Ticker:
         first_year = test1.get_first_year(final_val)
         result = test1.analyse_data_day_comparison(final_val, first_year, call_chance=0.8)
 
-        self.__write_analyze_csv(result, ticker, first_year)
+        self.__write_analyze_csv(result, ticker, first_year, yfin_data)
 
     @staticmethod
-    def __write_analyze_csv(result, ticker, first_year):
+    def __write_analyze_csv(result, ticker, first_year, yfin_data):
+        """
+        Writes the data in to a csv file
+        :param result:
+        :param ticker:
+        :param first_year:
+        :return:
+        """
 
-        f = open(f"yfinance_ticker/{ticker[1]}_analyze.csv", "w+")
+        if len(ticker[1]) > 15:
+            csv_name = ticker[1][:15]
+        else:
+            csv_name = ticker[1]
+        f = open(f"yfinance_ticker/{csv_name}_analyze.csv", "w+")
         f.write(f"Ticker Symbol: {ticker[0]}\n")
         f.write(f"Name: {ticker[1]}\n")
-        # f.write(f"Last Sale: {ticker[2]}\n")
-        # f.write(f"% Change: {ticker[3]}\n")
         f.write(f"Market Cap: {ticker[5]}\n")
         f.write(f"Country: {ticker[6]}\n")
         f.write(f"IPO Year: {ticker[7]}\n")
@@ -86,8 +107,36 @@ class Ticker:
         f.write(f"First year of data: {first_year}\n")
         f.write("Chance;Buy_Day;Buy_Month;Sell_Day;Sell_Month\n")
         for stock_result in result:
-            f.write(f'''{stock_result[0]};{stock_result[1]["day"]};{stock_result[1]["month"]};{stock_result[2]["day"]};{stock_result[2]["month"]}\n''')
+            chance = stock_result[0]
+            buy_day = stock_result[1]["day"]
+            buy_month = stock_result[1]["month"]
+            sell_day = stock_result[2]["day"]
+            sell_month = stock_result[2]["month"]
+            f.write(f'''{chance};{buy_day};{buy_month};{sell_day};{sell_month}\n''')
         f.close()
+
+        f = open(f"yfinance_ticker/{csv_name}_data.csv", "w+")
+        f.write("Date;Close;Adj Close;Volume\n")
+        for step in range(len(yfin_data)):
+            date = str(yfin_data["Date"][step])[:10]
+            close = str(yfin_data["Close"][step]).replace(".", ",")
+            adj_close = str(yfin_data["Adj Close"][step]).replace(".", ",")
+            volume = yfin_data["Volume"][step]
+            f.write(f'''{date};{close};{adj_close};{volume}\n''')
+        f.close()
+
+    @staticmethod
+    def __calculate_chances(first_year):
+
+        current_year = datetime.date.today().year - 1.5
+        difference = current_year - first_year
+        if first_year < 1984:
+            call_chance = 0.75
+        else:
+            call_chance = (-0.0000001245893*difference**4) + (0.0000031596081*difference**3) - (
+                0.0000287171413*difference**2) - 0.0033881195779*difference + 0.9997102044542
+
+        return call_chance, 0
 
 
 class Bundle:
