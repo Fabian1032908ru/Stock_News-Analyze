@@ -1,0 +1,144 @@
+
+
+Folgend die Daten der BASF_Xetra0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der Bayer_Xetra0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der AMD München0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_543900_historic0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der Allianz_Xetra0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der Adidas_Xetra0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_552484_historic0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_555200_historic0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der HP_Hamburg0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_514000_historic0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der Airbus_Xetra0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der AMD Düsseldorf0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_590375_historic0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der BMWSt_Xetra0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_519000_historic0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_578580_historic0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_555750_historic0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_578560_historic0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der Apple_Nasdaq0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_604700_historic 20.37.310: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_604700_historic-20: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_501822_historic0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_581005_historic0: E
+1: n
+2: d
+3: e
+
+
+Folgend die Daten der wkn_157484_historic0: E
+1: n
+2: d
+3: e
