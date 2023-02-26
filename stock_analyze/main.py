@@ -20,9 +20,10 @@ class Ticker:
     """
     Analyze all stocks in the stock_companies csv by the ticker and yfinance
     """
+
     def __init__(self):
         self.__ticker_list = self.__get_all_ticker()
-        random.shuffle(self.__ticker_list)
+        # random.shuffle(self.__ticker_list)
         self.__get_data(analyze=True)
 
     @staticmethod
@@ -47,7 +48,8 @@ class Ticker:
         for index, ticker in enumerate(self.__ticker_list):
             print(ticker[0])
             try:
-                data = yf.download(ticker[0], '1970-01-01', '2023-12-31')
+                # data = yf.download(ticker[0], '1970-01-01', '2023-12-31')
+                data = yf.download("AAPL", '1970-01-01', '2023-12-31')
             except KeyError:
                 print("Not Stock found on yfinance")
             data = data.reset_index()  # len data will be 0 if there is no available data
@@ -77,7 +79,10 @@ class Ticker:
         final_val = test1.convert_str_to_int(final_val)
         final_val = final_val[::-1]
         first_year = test1.get_first_year(final_val)
-        result = test1.analyse_data_day_comparison(final_val, first_year, call_chance=0.8)
+        chances = self.__calculate_chances(first_year)
+        call_chance, put_chance = chances[0], chances[1]
+        result = test1.analyse_data_day_comparison(final_val, first_year,
+                                                   call_chance=call_chance, put_chance=put_chance)
 
         self.__write_analyze_csv(result, ticker, first_year, yfin_data)
 
@@ -107,11 +112,11 @@ class Ticker:
         f.write(f"First year of data: {first_year}\n")
         f.write("Chance;Buy_Day;Buy_Month;Sell_Day;Sell_Month\n")
         for stock_result in result:
-            chance = stock_result[0]
-            buy_day = stock_result[1]["day"]
-            buy_month = stock_result[1]["month"]
-            sell_day = stock_result[2]["day"]
-            sell_month = stock_result[2]["month"]
+            chance = stock_result[0][0]
+            buy_day = stock_result[0][1]["day"]
+            buy_month = stock_result[0][1]["month"]
+            sell_day = stock_result[0][2]["day"]
+            sell_month = stock_result[0][2]["month"]
             f.write(f'''{chance};{buy_day};{buy_month};{sell_day};{sell_month}\n''')
         f.close()
 
@@ -124,6 +129,7 @@ class Ticker:
             volume = yfin_data["Volume"][step]
             f.write(f'''{date};{close};{adj_close};{volume}\n''')
         f.close()
+        exit()
 
     @staticmethod
     def __calculate_chances(first_year):
@@ -132,17 +138,26 @@ class Ticker:
         difference = current_year - first_year
         if first_year < 1984:
             call_chance = 0.75
+            put_chance = 0.15
         else:
-            call_chance = (-0.0000001245893*difference**4) + (0.0000031596081*difference**3) - (
-                0.0000287171413*difference**2) - 0.0033881195779*difference + 0.9997102044542
+            call_chance = -0.0000001245893 * difference ** 4 + 0.0000031596081 * difference ** 3 -\
+                          0.0000287171413 * difference ** 2 - 0.0033881195779 * difference + \
+                          0.9997102044542
+            put_chance = 0.0000000075278 * difference ** 4 + 0.0000008609729 * difference ** 3 + \
+                         0.0000247593598 * difference ** 2 - 0.0000157194214 * difference - \
+                         0.0028931794108
+            """
+            0.0000000075278 ×* + 0.0000008609729 ×3 + 0.0000247593598 ×2 - 0.0000157194214 x - 0.0028931794108
+            """
 
-        return call_chance, 0
+        return call_chance, put_chance
 
 
 class Bundle:
     """
     Only analyze the stocks in the csv folder
     """
+
     def __init__(self):
         self.__analyze()
 

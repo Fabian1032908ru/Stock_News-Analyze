@@ -1,10 +1,10 @@
 """
 Creating a Class for the stocks
 """
+import math
 
 from securities_paper import Securities
 from Draw_Graphs import Graph
-from abc import abstractmethod
 
 
 class Stock(Securities, Graph):
@@ -141,6 +141,78 @@ class Stock(Securities, Graph):
 
                         chance /= len(days[0])
                         if (chance > call_chance or chance < put_chance) and chance != 0:
-                            buy_or_not.append([chance, days[0][0], days[1][0]])
+                            buy_or_not.append([[chance, days[0][0], days[1][0]], []])
+                            for current_year in range(len(days[0])):
+                                buy_or_not[len(buy_or_not) - 1][1].append([
+                                    {
+                                        "type": "BUY DAY",
+                                        "year": days[0][current_year]["year"],
+                                        "month": days[0][current_year]["month"],
+                                        "day": days[0][current_year]["day"],
+                                        "course": days[0][current_year]["closing_course"]
+                                    },
+                                    {
+                                        "type": "SELLING DAY",
+                                        "year": days[1][current_year]["year"],
+                                        "month": days[1][current_year]["month"],
+                                        "day": days[1][current_year]["day"],
+                                        "course": days[1][current_year]["closing_course"]
+                                    }
+                                ])
 
-        return buy_or_not
+        print(len(buy_or_not))
+        if len(buy_or_not) > 10:
+            filtered = self.filter_results(buy_or_not)
+        else:
+            filtered = buy_or_not
+
+        return filtered
+
+    def filter_results(self, values):
+        """
+        Function to filter 10 results from all the possible results
+        :param values: All possible buying data
+        """
+        for v in values:
+            print(v)
+
+        top_res = []
+        current_max = values[0]
+        current_lst = [values[0]]
+        for value in values:
+            if value[0][0] > current_max[0][0]:
+                current_max = value
+                current_lst = [value]
+            elif value[0][0] == current_max[0][0]:
+                current_lst.append(value)
+
+        # Evaluate the distance between buying and selling date, best distance is top
+        # Only if there are still more then 10 results
+        best_day_difference = []
+        if len(current_lst) > 10:
+            for worth in current_lst:
+                print(worth)
+                if worth[0][1]["year"] == worth[0][2]["year"]:
+                    days = (worth[0][2]["month"] - worth[0][1]["month"]) * 12.5 + \
+                           (worth[0][1]["day"] - worth[0][2]["day"])
+                else:
+                    days = (12 - (worth[0][2]["month"] - worth[0][1]["month"])) * 12.5 + \
+                           (worth[0][1]["day"] - worth[0][2]["day"])
+
+                print(days)
+                print(self.evaluate_date_differences(days))
+
+
+
+        return ""
+
+    def evaluate_date_differences(self, distance):
+        """
+        Gets the amount of days between two dates and evaluates those dates
+        :param distance: Amount of days between the two dates
+        :return: returns the aevaluations as float
+        """
+        result = -0.0000000020357 * distance ** 4 + 0.0000017711697 * distance ** 3 - \
+                 0.0005269654884 * distance ** 2 + 0.0572989956457 * distance - 1.0952373976091
+
+        return result

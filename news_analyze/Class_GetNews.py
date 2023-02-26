@@ -8,6 +8,7 @@ import datetime
 import shutil
 
 from GoogleNews import GoogleNews
+from caffeinate import caffeinate
 import subprocess
 
 # get current directory
@@ -60,7 +61,8 @@ def call_news_class():
             companies.append(com)
         print(companies)
 
-    for com in companies:
+    for index, com in enumerate(companies):
+        print(f"Current company company: {index} {com}")
         if com == "None":
             g = News()
         else:
@@ -156,4 +158,5 @@ if __name__ == '__main__':
         print(Warning("You entered with the wrong device to make a backup.\nNo Backup has been "
                       "done!!!"))
     if input("1 get all news") == "1":
+        # caffeinate.run()
         call_news_class()
