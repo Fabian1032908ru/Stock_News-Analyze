@@ -41,6 +41,7 @@ class LaunchPage: UIViewController {
             
             UIImageView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.55, initialSpringVelocity: 0.5, options: .curveLinear, animations: { [self] in
                 
+                // Placing Image on the top of the screen possible view
                 imageview_logo.frame = CGRect(x: imageview_logo.frame.minX, y: height/8, width: imageview_logo.frame.width, height: imageview_logo.frame.height)
                 
             })
