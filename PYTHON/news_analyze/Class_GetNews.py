@@ -37,7 +37,8 @@ def make_backup() -> bool:
     if serial_number == "FVFY2HU3HV22":
         current_date = datetime.datetime.now()
         formatted_date = current_date.strftime("%m-%d-%Y")
-        src_folder = "/Users/fabian/Desktop/Python/seasonalyze/Stock_News-Analyze/news_analyze/csv"
+        src_folder = "/Users/fabian/Desktop/Python/seasonalyze/Stock_News-Analyze/PYTHON" \
+                     "/news_analyze/csv"
         dst_folder1 = f"/Users/fabian/Desktop/News_Data_Back_Up_Folder/{formatted_date}"
 
         if os.path.exists(dst_folder1):

@@ -17,6 +17,12 @@
 		1F5E48E729AB5FDB0073E735 /* seasonalyzeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5E48E629AB5FDB0073E735 /* seasonalyzeTests.swift */; };
 		1F5E48F129AB5FDB0073E735 /* seasonalyzeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5E48F029AB5FDB0073E735 /* seasonalyzeUITests.swift */; };
 		1F5E48F329AB5FDB0073E735 /* seasonalyzeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5E48F229AB5FDB0073E735 /* seasonalyzeUITestsLaunchTests.swift */; };
+		1FD5529329ACABC00054D747 /* Login_Page_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5529229ACABC00054D747 /* Login_Page_ViewController.swift */; };
+		1FD5529429ACABC00054D747 /* Login_Page_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5529229ACABC00054D747 /* Login_Page_ViewController.swift */; };
+		1FD5529529ACABC00054D747 /* Login_Page_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5529229ACABC00054D747 /* Login_Page_ViewController.swift */; };
+		1FD5529729ACAF920054D747 /* Register_Page_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5529629ACAF920054D747 /* Register_Page_ViewController.swift */; };
+		1FD5529829ACAF920054D747 /* Register_Page_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5529629ACAF920054D747 /* Register_Page_ViewController.swift */; };
+		1FD5529929ACAF920054D747 /* Register_Page_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5529629ACAF920054D747 /* Register_Page_ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +57,8 @@
 		1F5E48EC29AB5FDB0073E735 /* seasonalyzeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = seasonalyzeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F5E48F029AB5FDB0073E735 /* seasonalyzeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seasonalyzeUITests.swift; sourceTree = "<group>"; };
 		1F5E48F229AB5FDB0073E735 /* seasonalyzeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seasonalyzeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1FD5529229ACABC00054D747 /* Login_Page_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_Page_ViewController.swift; sourceTree = "<group>"; };
+		1FD5529629ACAF920054D747 /* Register_Page_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register_Page_ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +117,8 @@
 				1F5E48DA29AB5FDA0073E735 /* LaunchScreen.storyboard */,
 				1F5E48DD29AB5FDA0073E735 /* Info.plist */,
 				1F5E48D529AB5FD70073E735 /* seasonalyze.xcdatamodeld */,
+				1FD5529229ACABC00054D747 /* Login_Page_ViewController.swift */,
+				1FD5529629ACAF920054D747 /* Register_Page_ViewController.swift */,
 			);
 			path = seasonalyze;
 			sourceTree = "<group>";
@@ -264,6 +274,8 @@
 				1F5E48D129AB5FD70073E735 /* LaunchPage.swift in Sources */,
 				1F5E48CD29AB5FD70073E735 /* AppDelegate.swift in Sources */,
 				1F5E48D729AB5FD70073E735 /* seasonalyze.xcdatamodeld in Sources */,
+				1FD5529329ACABC00054D747 /* Login_Page_ViewController.swift in Sources */,
+				1FD5529729ACAF920054D747 /* Register_Page_ViewController.swift in Sources */,
 				1F5E48CF29AB5FD70073E735 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,6 +285,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F5E48E729AB5FDB0073E735 /* seasonalyzeTests.swift in Sources */,
+				1FD5529829ACAF920054D747 /* Register_Page_ViewController.swift in Sources */,
+				1FD5529429ACABC00054D747 /* Login_Page_ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +294,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FD5529929ACAF920054D747 /* Register_Page_ViewController.swift in Sources */,
+				1FD5529529ACABC00054D747 /* Login_Page_ViewController.swift in Sources */,
 				1F5E48F129AB5FDB0073E735 /* seasonalyzeUITests.swift in Sources */,
 				1F5E48F329AB5FDB0073E735 /* seasonalyzeUITestsLaunchTests.swift in Sources */,
 			);
@@ -444,11 +460,13 @@
 				DEVELOPMENT_TEAM = S33M37958A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = seasonalyze/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,11 +490,13 @@
 				DEVELOPMENT_TEAM = S33M37958A;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = seasonalyze/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.finance";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIStatusBarStyle = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
