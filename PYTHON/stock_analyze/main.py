@@ -110,14 +110,26 @@ class Ticker:
         f.write(f"Sector: {ticker[9]}\n")
         f.write(f"Industry: {ticker[10]}\n")
         f.write(f"First year of data: {first_year}\n")
-        f.write("Chance;Buy_Day;Buy_Month;Sell_Day;Sell_Month\n")
+        f.write("Chance;Profit;Buy_Day;Buy_Month;Sell_Day;Sell_Month;;")
+        f.write(";Buy;Course;Sell;Course"*len(result[0][1]))
+        f.write("\n")
         for stock_result in result:
             chance = stock_result[0][0]
-            buy_day = stock_result[0][1]["day"]
-            buy_month = stock_result[0][1]["month"]
-            sell_day = stock_result[0][2]["day"]
-            sell_month = stock_result[0][2]["month"]
-            f.write(f'''{chance};{buy_day};{buy_month};{sell_day};{sell_month}\n''')
+            profit = str(float(stock_result[0][1]).__round__(2)).replace(".", ",")
+            buy_day = stock_result[0][2]["day"]
+            buy_month = stock_result[0][2]["month"]
+            sell_day = stock_result[0][3]["day"]
+            sell_month = stock_result[0][3]["month"]
+            f.write(f'''{chance};{profit};{buy_day};{buy_month};{sell_day};{sell_month};;''')
+            for days in stock_result[1]:
+                buy_date = \
+                    f'''{int(days[0]["day"])}.{int(days[0]["month"])}.{int(days[0]["year"])}'''
+                sell_date = \
+                    f'''{int(days[1]["day"])}.{int(days[1]["month"])}.{int(days[1]["year"])}'''
+                buy_course = str(float(days[0]["course"]).__round__(2)).replace(".", ",")
+                sell_course = str(float(days[1]["course"]).__round__(2)).replace(".", ",")
+                f.write(f''';{buy_date};{buy_course};{sell_date};{sell_course}''')
+            f.write("\n")
         f.close()
 
         f = open(f"yfinance_ticker/{csv_name}_data.csv", "w+")

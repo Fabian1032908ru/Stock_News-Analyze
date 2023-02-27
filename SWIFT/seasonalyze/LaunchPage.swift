@@ -94,7 +94,7 @@ class LaunchPage: UIViewController {
         login_button.alpha = 0
         
         // Delay animation around 4 seconds and then show login screen
-        let seconds = 2.0
+        let seconds = 0.0
         DispatchQueue.main.asyncAfter(deadline: .now() + seconds) { [self] in
             
             UIImageView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.55, initialSpringVelocity: 0.5, options: .curveLinear, animations: { [self] in

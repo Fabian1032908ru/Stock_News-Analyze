@@ -16,9 +16,8 @@ class Register_Page_ViewController: UIViewController {
     var imageview_logo: UIImageView!
     
     let scrollView = UIScrollView()
-    let stackView = UIStackView()
     var nameTextField: UITextField!
-    let birthTextField = UITextField()
+    var birthDatePicker: UIDatePicker!
     var emailTextField: UITextField!
     let passwordTextField = UITextField()
     let confirmPasswordTextField = UITextField()
@@ -73,6 +72,11 @@ class Register_Page_ViewController: UIViewController {
         nameTextField.clearButtonMode = .whileEditing
         scrollview_register_page.addSubview(nameTextField)
         nameTextField.frame  = CGRect(x: width*0.05, y: height*0.26, width: width*0.9, height: height*0.06)
+        
+        birthDatePicker = UIDatePicker(frame: CGRect(x: width*0.05, y: height*0.345, width: width*0.9, height: height*0.06))
+        birthDatePicker.datePickerMode = .date
+        birthDatePicker.contentHorizontalAlignment = .left
+        scrollview_register_page.addSubview(birthDatePicker)
         
     }
     
