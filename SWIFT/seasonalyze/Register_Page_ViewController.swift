@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class Register_Page_ViewController: UIViewController {
     
@@ -23,6 +24,8 @@ class Register_Page_ViewController: UIViewController {
     let confirmPasswordTextField = UITextField()
     let acceptGtcCheckbox = UISwitch()
     let acceptRiskEducationCheckbox = UISwitch()
+    
+    var register_button: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +80,36 @@ class Register_Page_ViewController: UIViewController {
         birthDatePicker.datePickerMode = .date
         birthDatePicker.contentHorizontalAlignment = .left
         scrollview_register_page.addSubview(birthDatePicker)
+        
+        register_button = UIButton()
+        register_button.setTitle("Register", for: .normal)
+        register_button.backgroundColor = .systemBlue
+        register_button.addTarget(self, action: #selector(register_button_func), for: .touchUpInside)
+        scrollview_register_page.addSubview(register_button)
+        register_button.frame = CGRect(x: width*0.05, y: height*0.355, width: width*0.9, height: height*0.06)
+        
+    }
+    
+    @objc func register_button_func() {
+        
+        let mail = emailTextField.text!
+        let password = nameTextField.text!
+        
+        FirebaseAuth.Auth.auth().createUser(withEmail: mail, password: password, completion: { [weak self] result, error in
+          
+            guard let _ = self else {
+                return
+            }
+            guard error == nil else {
+                print("Account creation failed")
+                return
+            }
+            
+            print("Registaration compelte")
+            
+            self!.view.backgroundColor = .red
+            
+        })
         
     }
     

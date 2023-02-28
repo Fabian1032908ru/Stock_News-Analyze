@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 var height, width: CGFloat!
 
@@ -29,6 +30,17 @@ class LaunchPage: UIViewController {
         height = self.view.frame.height
         
         setup_interface()
+        
+    }
+    
+    @objc func LogOut() {
+        
+        do {
+            try FirebaseAuth.Auth.auth().signOut()
+        }
+        catch {
+            print("error")
+        }
         
     }
     
@@ -106,17 +118,39 @@ class LaunchPage: UIViewController {
                 
             })
             
-            imageview_logo_word.frame = CGRect(x: imageview_logo_word.frame.minX, y: imageview_logo.frame.minY + height/15, width: imageview_logo_word.frame.width, height: imageview_logo_word.frame.height)
-            
-            UIButton.animate(withDuration: 0.5, delay: 0.7, animations: { [self] in
+            // Incase the user is already signed in, we can skip some pages
+            if FirebaseAuth.Auth.auth().currentUser != nil {
                 
-                register_button.alpha = 1
-                login_button.alpha = 1
-                imageview_logo_word.alpha = 1
+                imageview_logo_word.frame = CGRect(x: imageview_logo_word.frame.minX, y: imageview_logo.frame.minY + height/15, width: imageview_logo_word.frame.width, height: imageview_logo_word.frame.height)
+                // Duration 0.5 delay 1
+                UIImageView.animate(withDuration: 0.0, delay: 0, animations: { [self] in
+                    imageview_logo_word.alpha = 1
+                })
                 
-            })
+                // wait 2.5
+                let seconds = 0
+                DispatchQueue.main.asyncAfter(deadline: .now() + seconds, execute: {[self] in
+                    
+                    let login_page_vc = storyboard?.instantiateViewController(identifier: "Main_Tabbar") as! Main_UITabBarControllerViewController
+                    navigationController?.pushViewController(login_page_vc, animated: true)
+                    
+                })
+                
+            }
+            else {
+                
+                imageview_logo_word.frame = CGRect(x: imageview_logo_word.frame.minX, y: imageview_logo.frame.minY + height/15, width: imageview_logo_word.frame.width, height: imageview_logo_word.frame.height)
+                
+                UIButton.animate(withDuration: 0.5, delay: 0.7, animations: { [self] in
+                    
+                    register_button.alpha = 1
+                    login_button.alpha = 1
+                    imageview_logo_word.alpha = 1
+                    
+                })
+                
+            }
             
-            print(imageview_logo_word.frame)
             
         }
         

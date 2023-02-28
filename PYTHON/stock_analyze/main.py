@@ -23,7 +23,7 @@ class Ticker:
 
     def __init__(self):
         self.__ticker_list = self.__get_all_ticker()
-        # random.shuffle(self.__ticker_list)
+        random.shuffle(self.__ticker_list)
         self.__get_data(analyze=True)
 
     @staticmethod
@@ -48,8 +48,8 @@ class Ticker:
         for index, ticker in enumerate(self.__ticker_list):
             print(ticker[0])
             try:
-                # data = yf.download(ticker[0], '1970-01-01', '2023-12-31')
-                data = yf.download("AAPL", '1970-01-01', '2023-12-31')
+                data = yf.download(ticker[0], '1970-01-01', '2023-12-31')
+                # data = yf.download("AAPL", '1970-01-01', '2023-12-31')
             except KeyError:
                 print("Not Stock found on yfinance")
             data = data.reset_index()  # len data will be 0 if there is no available data
@@ -80,11 +80,12 @@ class Ticker:
         final_val = final_val[::-1]
         first_year = test1.get_first_year(final_val)
         chances = self.__calculate_chances(first_year)
-        call_chance, put_chance = chances[0], chances[1]
-        result = test1.analyse_data_day_comparison(final_val, first_year,
+        if first_year < 2015:
+            call_chance, put_chance = chances[0], chances[1]
+            result = test1.analyse_data_day_comparison(final_val, first_year,
                                                    call_chance=call_chance, put_chance=put_chance)
 
-        self.__write_analyze_csv(result, ticker, first_year, yfin_data)
+            self.__write_analyze_csv(result, ticker, first_year, yfin_data)
 
     @staticmethod
     def __write_analyze_csv(result, ticker, first_year, yfin_data):
@@ -111,26 +112,32 @@ class Ticker:
         f.write(f"Industry: {ticker[10]}\n")
         f.write(f"First year of data: {first_year}\n")
         f.write("Chance;Profit;Buy_Day;Buy_Month;Sell_Day;Sell_Month;;")
-        f.write(";Buy;Course;Sell;Course"*len(result[0][1]))
+        if result is not None:
+            f.write(";Buy;Course;Sell;Course"*len(result[0][1]))
+        else:
+            f.write(";Buy;Course;Sell;Course")
         f.write("\n")
-        for stock_result in result:
-            chance = stock_result[0][0]
-            profit = str(float(stock_result[0][1]).__round__(2)).replace(".", ",")
-            buy_day = stock_result[0][2]["day"]
-            buy_month = stock_result[0][2]["month"]
-            sell_day = stock_result[0][3]["day"]
-            sell_month = stock_result[0][3]["month"]
-            f.write(f'''{chance};{profit};{buy_day};{buy_month};{sell_day};{sell_month};;''')
-            for days in stock_result[1]:
-                buy_date = \
-                    f'''{int(days[0]["day"])}.{int(days[0]["month"])}.{int(days[0]["year"])}'''
-                sell_date = \
-                    f'''{int(days[1]["day"])}.{int(days[1]["month"])}.{int(days[1]["year"])}'''
-                buy_course = str(float(days[0]["course"]).__round__(2)).replace(".", ",")
-                sell_course = str(float(days[1]["course"]).__round__(2)).replace(".", ",")
-                f.write(f''';{buy_date};{buy_course};{sell_date};{sell_course}''')
-            f.write("\n")
-        f.close()
+        if result is not None:
+            for stock_result in result:
+                chance = stock_result[0][0]
+                profit = str(float(stock_result[0][1]).__round__(2)).replace(".", ",")
+                buy_day = stock_result[0][2]["day"]
+                buy_month = stock_result[0][2]["month"]
+                sell_day = stock_result[0][3]["day"]
+                sell_month = stock_result[0][3]["month"]
+                f.write(f'''{chance};{profit};{buy_day};{buy_month};{sell_day};{sell_month};;''')
+                for days in stock_result[1]:
+                    buy_date = \
+                        f'''{int(days[0]["day"])}.{int(days[0]["month"])}.{int(days[0]["year"])}'''
+                    sell_date = \
+                        f'''{int(days[1]["day"])}.{int(days[1]["month"])}.{int(days[1]["year"])}'''
+                    buy_course = str(float(days[0]["course"]).__round__(2)).replace(".", ",")
+                    sell_course = str(float(days[1]["course"]).__round__(2)).replace(".", ",")
+                    f.write(f''';{buy_date};{buy_course};{sell_date};{sell_course}''')
+                f.write("\n")
+            f.close()
+        else:
+            f.write("No relevant results")
 
         f = open(f"yfinance_ticker/{csv_name}_data.csv", "w+")
         f.write("Date;Close;Adj Close;Volume\n")
@@ -141,7 +148,7 @@ class Ticker:
             volume = yfin_data["Volume"][step]
             f.write(f'''{date};{close};{adj_close};{volume}\n''')
         f.close()
-        exit()
+
 
     @staticmethod
     def __calculate_chances(first_year):

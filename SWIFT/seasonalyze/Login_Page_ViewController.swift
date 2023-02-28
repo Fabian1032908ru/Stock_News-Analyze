@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseAuth
 
 class Login_Page_ViewController: UIViewController {
     
@@ -17,6 +18,48 @@ class Login_Page_ViewController: UIViewController {
     var passwordTextField: UITextField!
     var loginButton: UIButton!
     var forgotPasswordButton: UIButton!
+    
+    @objc func login_button_func() {
+        
+        print("LOGIN in progress")
+        
+        guard let email = emailTextField.text, !email.isEmpty,
+              let password = passwordTextField.text, !password.isEmpty else {
+            print("Missing field data")
+            return
+        }
+        
+        // Get Auth instance
+        
+        // Attempt sign in
+        
+        // if failure present alert to vreate account
+        
+        // check sing in on app launch
+        
+        FirebaseAuth.Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] result, error in
+            guard let strongSelf = self else {
+                return
+            }
+            guard error == nil else {
+                // Show account creation
+                strongSelf.showCreateAccout()
+                return
+            }
+            
+            print("Yoz are signed in")
+            
+            self!.view.backgroundColor = .red
+            
+        })
+        
+    }
+    
+    func showCreateAccout() {
+        
+        print("SHOW CREATE ACCOUNT")
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +107,7 @@ class Login_Page_ViewController: UIViewController {
         loginButton.translatesAutoresizingMaskIntoConstraints = false
         loginButton.setTitle("Login", for: .normal)
         loginButton.setTitleColor(.white, for: .normal)
+        loginButton.addTarget(self, action: #selector(login_button_func), for: .touchUpInside)
         loginButton.backgroundColor = .systemBlue
         loginButton.layer.cornerRadius = 8
         // loginButton.addTarget(self, action: #selector(loginButtonClicked), for: .touchUpInside)
