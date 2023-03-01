@@ -9,15 +9,31 @@ import UIKit
 
 class Home_Tab_ViewController: UIViewController {
 
+    var testbutton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationItem.backBarButtonItem?.isEnabled = false
-        self.navigationController?.interactivePopGestureRecognizer?.isEnabled = false
-        self.navigationController?.navigationBar.isHidden = true
+        self.title = "Home"
+        
+        self.navigationController?.navigationBar.isHidden = false
         
         view.backgroundColor = .blue
         
+        testbutton = UIButton(frame: CGRect(x: 100, y: 100, width: 200, height: 200))
+        testbutton.backgroundColor = .red
+        view.addSubview(testbutton)
+        testbutton.addTarget(self, action: #selector(test_button_func), for: .touchUpInside)
+        
+    }
+    
+    @objc func test_button_func() {
+         
+        print("Test push try")
+        
+        let testPage = Test_ViewController()
+        navigationController?.pushViewController(testPage, animated: true)
+
         
     }
     

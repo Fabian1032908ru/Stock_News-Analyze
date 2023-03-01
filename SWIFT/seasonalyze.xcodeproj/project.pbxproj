@@ -19,6 +19,8 @@
 		1F5E48E729AB5FDB0073E735 /* seasonalyzeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5E48E629AB5FDB0073E735 /* seasonalyzeTests.swift */; };
 		1F5E48F129AB5FDB0073E735 /* seasonalyzeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5E48F029AB5FDB0073E735 /* seasonalyzeUITests.swift */; };
 		1F5E48F329AB5FDB0073E735 /* seasonalyzeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5E48F229AB5FDB0073E735 /* seasonalyzeUITestsLaunchTests.swift */; };
+		1FAED37129AF29980017459B /* Test_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FAED37029AF29970017459B /* Test_ViewController.swift */; };
+		1FBA2C0F29AF6F3000EA7BD3 /* Test2_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FBA2C0E29AF6F2F00EA7BD3 /* Test2_ViewController.swift */; };
 		1FD5529329ACABC00054D747 /* Login_Page_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5529229ACABC00054D747 /* Login_Page_ViewController.swift */; };
 		1FD5529429ACABC00054D747 /* Login_Page_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5529229ACABC00054D747 /* Login_Page_ViewController.swift */; };
 		1FD5529529ACABC00054D747 /* Login_Page_ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD5529229ACABC00054D747 /* Login_Page_ViewController.swift */; };
@@ -73,6 +75,8 @@
 		1F5E48EC29AB5FDB0073E735 /* seasonalyzeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = seasonalyzeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F5E48F029AB5FDB0073E735 /* seasonalyzeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seasonalyzeUITests.swift; sourceTree = "<group>"; };
 		1F5E48F229AB5FDB0073E735 /* seasonalyzeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seasonalyzeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1FAED37029AF29970017459B /* Test_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_ViewController.swift; sourceTree = "<group>"; };
+		1FBA2C0E29AF6F2F00EA7BD3 /* Test2_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2_ViewController.swift; sourceTree = "<group>"; };
 		1FD5529229ACABC00054D747 /* Login_Page_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_Page_ViewController.swift; sourceTree = "<group>"; };
 		1FD5529629ACAF920054D747 /* Register_Page_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register_Page_ViewController.swift; sourceTree = "<group>"; };
 		1FE473FA29AE69BC005AB931 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -159,6 +163,8 @@
 				1FE4740029AE854C005AB931 /* Settings_ViewController.swift */,
 				1FE4740429AE857A005AB931 /* Favourites_ViewController.swift */,
 				1FE4740829AE861E005AB931 /* Main_UITabBarControllerViewController.swift */,
+				1FAED37029AF29970017459B /* Test_ViewController.swift */,
+				1FBA2C0E29AF6F2F00EA7BD3 /* Test2_ViewController.swift */,
 			);
 			path = seasonalyze;
 			sourceTree = "<group>";
@@ -448,8 +454,10 @@
 				1F5E48CD29AB5FD70073E735 /* AppDelegate.swift in Sources */,
 				1FE4740529AE857A005AB931 /* Favourites_ViewController.swift in Sources */,
 				1F5E48D729AB5FD70073E735 /* seasonalyze.xcdatamodeld in Sources */,
+				1FBA2C0F29AF6F3000EA7BD3 /* Test2_ViewController.swift in Sources */,
 				1FD5529329ACABC00054D747 /* Login_Page_ViewController.swift in Sources */,
 				1FD5529729ACAF920054D747 /* Register_Page_ViewController.swift in Sources */,
+				1FAED37129AF29980017459B /* Test_ViewController.swift in Sources */,
 				1F5E48CF29AB5FD70073E735 /* SceneDelegate.swift in Sources */,
 				1FE473FD29AE8126005AB931 /* Home_Tab_ViewController.swift in Sources */,
 				1FE4740129AE854C005AB931 /* Settings_ViewController.swift in Sources */,

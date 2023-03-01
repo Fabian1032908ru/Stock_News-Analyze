@@ -29,6 +29,8 @@ class LaunchPage: UIViewController {
         width = self.view.frame.width
         height = self.view.frame.height
         
+        LogOut()
+        
         setup_interface()
         
     }
@@ -46,15 +48,29 @@ class LaunchPage: UIViewController {
     
     @objc func login_button_func() {
         
-        let login_page_vc = storyboard?.instantiateViewController(identifier: "Login_Page") as! Login_Page_ViewController
-        navigationController?.pushViewController(login_page_vc, animated: true)
+        let login_page = Login_Page_ViewController()
+        navigationController?.pushViewController(login_page, animated: true)
         
     }
     
     @objc func register_button_func() {
         
-        let login_page_vc = storyboard?.instantiateViewController(identifier: "Register_Page") as! Register_Page_ViewController
-        navigationController?.pushViewController(login_page_vc, animated: true)
+        let register_page = Register_Page_ViewController()
+        navigationController?.pushViewController(register_page, animated: true)
+        
+    }
+    
+    func present_Tabbar() {
+        
+        // Create an instance of the new view controller you want to show
+        let newViewController = Main_UITabBarControllerViewController()
+
+        // Get the current navigation controller
+        guard let navController = self.navigationController else { return }
+
+        // Replace the current view controller stack with the new view controller
+        navController.setViewControllers([newViewController], animated: true)
+
         
     }
     
@@ -128,11 +144,10 @@ class LaunchPage: UIViewController {
                 })
                 
                 // wait 2.5
-                let seconds = 0
+                let seconds = 0.0
                 DispatchQueue.main.asyncAfter(deadline: .now() + seconds, execute: {[self] in
                     
-                    let login_page_vc = storyboard?.instantiateViewController(identifier: "Main_Tabbar") as! Main_UITabBarControllerViewController
-                    navigationController?.pushViewController(login_page_vc, animated: true)
+                    present_Tabbar()
                     
                 })
                 
