@@ -9,8 +9,11 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 class Register_Page_ViewController: UIViewController {
+    
+    var test: UIView!
     
     let database = Firestore.firestore()
     
@@ -36,19 +39,38 @@ class Register_Page_ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         // Set the background color
         view.backgroundColor = .systemBackground
+        
+        // Get Info when keyboard is expanding
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShow),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil
+        )
+        
+        // Get Info when keyboard is expanding
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardHides),
+            name: UIResponder.keyboardDidHideNotification,
+            object: nil
+        )
+        
+        // create scrollview
+        scrollview_register_page = UIScrollView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+        scrollview_register_page.contentSize = CGSize(width: width, height: height*0.85)
+        self.view.addSubview(scrollview_register_page)
+        
+        test = UIView(frame: CGRect(x: 0, y: 0, width: width, height: height*0.9))
+        scrollview_register_page.addSubview(test)
         
         // Add a tap gesture recognizer to hide the keyboard
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing(_:)))
         tapGesture.cancelsTouchesInView = false
-        view.addGestureRecognizer(tapGesture)
-        
-        // create scrollview
-        scrollview_register_page = UIScrollView(frame: CGRect(x: 0, y: 0, width: width, height: height))
-        scrollview_register_page.contentSize = CGSize(width: width, height: height)
-        self.view.addSubview(scrollview_register_page)
+        test.addGestureRecognizer(tapGesture)
         
         // create imageview with logo of ours show
         image_logo = UIImage(named: image_logo_name)
@@ -58,7 +80,7 @@ class Register_Page_ViewController: UIViewController {
         imageview_logo.center = self.view.center
         scrollview_register_page.addSubview(imageview_logo)
         // Replace the imageview immediatly after centering it
-        imageview_logo.frame = CGRect(x: imageview_logo.frame.minX, y: height/30, width: imageview_logo.frame.width, height: imageview_logo.frame.height)
+        imageview_logo.frame = CGRect(x: imageview_logo.frame.minX, y: 0, width: imageview_logo.frame.width, height: imageview_logo.frame.height)
         
         // Create the email text field
         emailTextField = UITextField()
@@ -72,7 +94,8 @@ class Register_Page_ViewController: UIViewController {
         emailTextField.returnKeyType = .next
         emailTextField.clearButtonMode = .whileEditing
         scrollview_register_page.addSubview(emailTextField)
-        emailTextField.frame = CGRect(x: width*0.05, y: height*0.175, width: width*0.9, height: height*0.06)
+        emailTextField.frame = CGRect(x: width*0.05, y: height*0.125, width: width*0.9, height: height*0.06)
+        emailTextField.textContentType = .emailAddress
         
         // Create the name text field
         nameTextField = UITextField()
@@ -86,7 +109,8 @@ class Register_Page_ViewController: UIViewController {
         nameTextField.returnKeyType = .next
         nameTextField.clearButtonMode = .whileEditing
         scrollview_register_page.addSubview(nameTextField)
-        nameTextField.frame  = CGRect(x: width*0.05, y: height*0.26, width: width*0.9, height: height*0.06)
+        nameTextField.frame  = CGRect(x: width*0.05, y: height*0.21, width: width*0.9, height: height*0.06)
+        nameTextField.textContentType = .name
         
         // Create the username text field
         usernameTextField = UITextField()
@@ -100,10 +124,11 @@ class Register_Page_ViewController: UIViewController {
         usernameTextField.returnKeyType = .next
         usernameTextField.clearButtonMode = .whileEditing
         scrollview_register_page.addSubview(usernameTextField)
-        usernameTextField.frame  = CGRect(x: width*0.05, y: height*0.345, width: width*0.9, height: height*0.06)
+        usernameTextField.frame = CGRect(x: width*0.05, y: height*0.295, width: width*0.9, height: height*0.06)
+        usernameTextField.textContentType = .username
         
         // create birthdate picker
-        birthDatePicker = UIDatePicker(frame: CGRect(x: width*0.05, y: height*0.43, width: width*0.9, height: height*0.06))
+        birthDatePicker = UIDatePicker(frame: CGRect(x: width*0.05, y: height*0.38, width: width*0.9, height: height*0.06))
         birthDatePicker.datePickerMode = .date
         birthDatePicker.contentHorizontalAlignment = .left
         scrollview_register_page.addSubview(birthDatePicker)
@@ -114,7 +139,7 @@ class Register_Page_ViewController: UIViewController {
         passwordTextField.placeholder = "Password"
         passwordTextField.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         passwordTextField.textColor = .label
-        passwordTextField.autocapitalizationType = .none
+        passwordTextField.autocapitalizationType = .allCharacters
         passwordTextField.borderStyle = .roundedRect
         passwordTextField.keyboardType = .default
         passwordTextField.returnKeyType = .next
@@ -122,13 +147,21 @@ class Register_Page_ViewController: UIViewController {
         scrollview_register_page.addSubview(passwordTextField)
         passwordTextField.frame  = CGRect(x: width*0.05, y: birthDatePicker.frame.maxY + height*0.025, width: width*0.9, height: height*0.06)
         
+        let visibilityButton = UIButton(type: .close)
+        visibilityButton.setImage(UIImage(named: "eye"), for: .normal)
+        visibilityButton.backgroundColor = .red
+        visibilityButton.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
+        
+        passwordTextField.rightView = visibilityButton
+        passwordTextField.rightViewMode = .whileEditing
+        
         // Create the confirm password text field
         confirmPasswordTextField = UITextField()
         // nameTextField.translatesAutoresizingMaskIntoConstraints = false
         confirmPasswordTextField.placeholder = "Confrim Password"
         confirmPasswordTextField.font = UIFont.systemFont(ofSize: 16, weight: .medium)
         confirmPasswordTextField.textColor = .label
-        confirmPasswordTextField.autocapitalizationType = .none
+        confirmPasswordTextField.autocapitalizationType = .allCharacters
         confirmPasswordTextField.borderStyle = .roundedRect
         confirmPasswordTextField.keyboardType = .default
         confirmPasswordTextField.returnKeyType = .next
@@ -138,7 +171,11 @@ class Register_Page_ViewController: UIViewController {
         
         // Do not show the password, replace with dots
         passwordTextField.isSecureTextEntry = true
+        // To be changed someday to newpassword
+        passwordTextField.textContentType = .name
         confirmPasswordTextField.isSecureTextEntry = true
+        confirmPasswordTextField.textContentType = .name
+        
         
         register_button = UIButton()
         register_button.setTitle("Register", for: .normal)
@@ -148,6 +185,32 @@ class Register_Page_ViewController: UIViewController {
         register_button.frame = CGRect(x: width*0.05, y: confirmPasswordTextField.frame.maxY + height*0.025, width: width*0.9, height: height*0.06)
         register_button.layer.cornerRadius = register_button.frame.height/8
         register_button.clipsToBounds = true
+        
+    }
+    
+    @objc func togglePasswordVisibility() {
+        
+        passwordTextField.isSecureTextEntry.toggle()
+        
+    }
+    
+    @objc func keyboardWillShow(_ notification: Notification) {
+                
+        if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+                        
+            scrollview_register_page.contentSize = CGSize(width: width, height: height * 0.85 + keyboardHeight/2)
+            
+        }
+        
+    }
+    
+    @objc func keyboardHides() {
+     
+        UIScrollView.animate(withDuration: 0.4, animations: {
+            self.scrollview_register_page.contentSize = CGSize(width: width, height: height * 0.85)
+        })
         
     }
     

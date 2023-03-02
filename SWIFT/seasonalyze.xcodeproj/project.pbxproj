@@ -60,6 +60,19 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1F8FB8EB29B143EF0006875B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1F5E48C929AB5FD70073E735 /* seasonalyze.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = seasonalyze.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F5E48CC29AB5FD70073E735 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +88,16 @@
 		1F5E48EC29AB5FDB0073E735 /* seasonalyzeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = seasonalyzeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F5E48F029AB5FDB0073E735 /* seasonalyzeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seasonalyzeUITests.swift; sourceTree = "<group>"; };
 		1F5E48F229AB5FDB0073E735 /* seasonalyzeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = seasonalyzeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		1F8FB8DB29B143ED0006875B /* AuthenticationServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AuthenticationServices.framework; path = System/Library/Frameworks/AuthenticationServices.framework; sourceTree = SDKROOT; };
+		1F8FB8DE29B143EE0006875B /* CredentialProviderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialProviderViewController.swift; sourceTree = "<group>"; };
+		1F8FB8E129B143EE0006875B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		1F8FB8E329B143EE0006875B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F8FB8E429B143EE0006875B /* autofill_seasonalyze.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = autofill_seasonalyze.entitlements; sourceTree = "<group>"; };
+		1F8FB8F129B144480006875B /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
+		1F8FB8F429B144480006875B /* AppProxyProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProxyProvider.swift; sourceTree = "<group>"; };
+		1F8FB8F629B144480006875B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1F8FB8F729B144480006875B /* network_seasonalyze.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = network_seasonalyze.entitlements; sourceTree = "<group>"; };
+		1F8FB8FE29B1448C0006875B /* seasonalyze.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = seasonalyze.entitlements; sourceTree = "<group>"; };
 		1FAED37029AF29970017459B /* Test_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test_ViewController.swift; sourceTree = "<group>"; };
 		1FBA2C0E29AF6F2F00EA7BD3 /* Test2_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2_ViewController.swift; sourceTree = "<group>"; };
 		1FD5529229ACABC00054D747 /* Login_Page_ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_Page_ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +152,8 @@
 				1F5E48CB29AB5FD70073E735 /* seasonalyze */,
 				1F5E48E529AB5FDB0073E735 /* seasonalyzeTests */,
 				1F5E48EF29AB5FDB0073E735 /* seasonalyzeUITests */,
+				1F8FB8DD29B143EE0006875B /* autofill_seasonalyze */,
+				1F8FB8F329B144480006875B /* network_seasonalyze */,
 				1F5E48CA29AB5FD70073E735 /* Products */,
 				C396F54663B91D1EDAEFBCAE /* Pods */,
 				A7EA75A17A8542432ACEFE1B /* Frameworks */,
@@ -148,6 +173,7 @@
 		1F5E48CB29AB5FD70073E735 /* seasonalyze */ = {
 			isa = PBXGroup;
 			children = (
+				1F8FB8FE29B1448C0006875B /* seasonalyze.entitlements */,
 				1FE473FA29AE69BC005AB931 /* GoogleService-Info.plist */,
 				1F5E48CC29AB5FD70073E735 /* AppDelegate.swift */,
 				1F5E48CE29AB5FD70073E735 /* SceneDelegate.swift */,
@@ -186,12 +212,35 @@
 			path = seasonalyzeUITests;
 			sourceTree = "<group>";
 		};
+		1F8FB8DD29B143EE0006875B /* autofill_seasonalyze */ = {
+			isa = PBXGroup;
+			children = (
+				1F8FB8DE29B143EE0006875B /* CredentialProviderViewController.swift */,
+				1F8FB8E029B143EE0006875B /* MainInterface.storyboard */,
+				1F8FB8E329B143EE0006875B /* Info.plist */,
+				1F8FB8E429B143EE0006875B /* autofill_seasonalyze.entitlements */,
+			);
+			path = autofill_seasonalyze;
+			sourceTree = "<group>";
+		};
+		1F8FB8F329B144480006875B /* network_seasonalyze */ = {
+			isa = PBXGroup;
+			children = (
+				1F8FB8F429B144480006875B /* AppProxyProvider.swift */,
+				1F8FB8F629B144480006875B /* Info.plist */,
+				1F8FB8F729B144480006875B /* network_seasonalyze.entitlements */,
+			);
+			path = network_seasonalyze;
+			sourceTree = "<group>";
+		};
 		A7EA75A17A8542432ACEFE1B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				A26FCC4329F929316932FC5B /* Pods_seasonalyze.framework */,
 				290A2C20193BD640D777639A /* Pods_seasonalyze_seasonalyzeUITests.framework */,
 				A80EE71F83B97C5B8D39B453 /* Pods_seasonalyzeTests.framework */,
+				1F8FB8DB29B143ED0006875B /* AuthenticationServices.framework */,
+				1F8FB8F129B144480006875B /* NetworkExtension.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -221,6 +270,7 @@
 				1F5E48C629AB5FD70073E735 /* Frameworks */,
 				1F5E48C729AB5FD70073E735 /* Resources */,
 				EE5B123960FA2C2FDE36FF2B /* [CP] Embed Pods Frameworks */,
+				1F8FB8EB29B143EF0006875B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -525,6 +575,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		1F8FB8E029B143EE0006875B /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1F8FB8E129B143EE0006875B /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -646,8 +704,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 868642DEF23385D396FB9830 /* Pods-seasonalyze.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = seasonalyze/seasonalyze.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S33M37958A;
@@ -667,6 +728,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Fabianstiewe.seasonalyze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -677,8 +739,11 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8FA47DE819D1C94A91289A03 /* Pods-seasonalyze.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = seasonalyze/seasonalyze.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S33M37958A;
@@ -698,6 +763,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Fabianstiewe.seasonalyze;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
