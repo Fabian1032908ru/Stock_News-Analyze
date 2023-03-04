@@ -48,8 +48,8 @@ class Ticker:
         for index, ticker in enumerate(self.__ticker_list):
             print(ticker[0])
             try:
-                data = yf.download(ticker[0], '1970-01-01', '2023-12-31')
-                # data = yf.download("AAPL", '1970-01-01', '2023-12-31')
+                # data = yf.download(ticker[0], '1970-01-01', '2023-12-31')
+                data = yf.download("AAPL", '1970-01-01', '2023-12-31')
             except KeyError:
                 print("Not Stock found on yfinance")
             data = data.reset_index()  # len data will be 0 if there is no available data
@@ -83,9 +83,54 @@ class Ticker:
         if first_year < 2015:
             call_chance, put_chance = chances[0], chances[1]
             result = test1.analyse_data_day_comparison(final_val, first_year,
-                                                   call_chance=call_chance, put_chance=put_chance)
+                                                       call_chance=call_chance,
+                                                       put_chance=put_chance)
 
             self.__write_analyze_csv(result, ticker, first_year, yfin_data)
+            self.__write_analyze_csv_buy_day_based(result, ticker, first_year)
+
+    @staticmethod
+    def __write_analyze_csv_buy_day_based(result, ticker, first_year):
+        """
+        As Add on writing the values in csv files, based on their buy date
+        :param result: result values
+        :param ticker: ticker symbol to identify the company
+        :param first_year: ipo year
+        :return:
+        """
+        for res in result:
+            month = res[0][2]["month"]
+            day = res[0][2]["day"]
+            filename = f"yfinance_ticker/Buy_dates/{day}_{month}.csv"
+            file_exist = os.path.isfile(filename)
+            if file_exist:
+                f = open(filename, "a")
+                f.write(f"Chance: {res[0][0]};")
+                f.write(f"Profit: {res[0][1]};")
+                f.write(f"Ticker Symbol: {ticker[0]};")
+                f.write(f"Name: {ticker[1]};")
+                f.write(f"Market Cap: {ticker[5]};")
+                f.write(f"Country: {ticker[6]};")
+                f.write(f"IPO Year: {ticker[7]};")
+                f.write(f"Volume: {ticker[8]};")
+                f.write(f"Sector: {ticker[9]};")
+                f.write(f"Industry: {ticker[10]}")
+            else:
+                f = open(filename, "w")
+                f.write(f"Chance: {res[0][0]};")
+                f.write(f"Profit: {res[0][1]};")
+                f.write(f"Ticker Symbol: {ticker[0]};")
+                f.write(f"Name: {ticker[1]};")
+                f.write(f"Market Cap: {ticker[5]};")
+                f.write(f"Country: {ticker[6]};")
+                f.write(f"IPO Year: {ticker[7]};")
+                f.write(f"Volume: {ticker[8]};")
+                f.write(f"Sector: {ticker[9]};")
+                f.write(f"Industry: {ticker[10]}")
+
+            f.close()
+
+        exit()
 
     @staticmethod
     def __write_analyze_csv(result, ticker, first_year, yfin_data):
@@ -101,7 +146,7 @@ class Ticker:
             csv_name = ticker[1][:15]
         else:
             csv_name = ticker[1]
-        f = open(f"yfinance_ticker/{csv_name}_analyze.csv", "w+")
+        f = open(f"yfinance_ticker/Companies_analyze/{csv_name}_analyze.csv", "w+")
         f.write(f"Ticker Symbol: {ticker[0]}\n")
         f.write(f"Name: {ticker[1]}\n")
         f.write(f"Market Cap: {ticker[5]}\n")
@@ -113,7 +158,7 @@ class Ticker:
         f.write(f"First year of data: {first_year}\n")
         f.write("Chance;Profit;Buy_Day;Buy_Month;Sell_Day;Sell_Month;;")
         if result is not None:
-            f.write(";Buy;Course;Sell;Course"*len(result[0][1]))
+            f.write(";Buy;Course;Sell;Course" * len(result[0][1]))
         else:
             f.write(";Buy;Course;Sell;Course")
         f.write("\n")
@@ -139,7 +184,7 @@ class Ticker:
         else:
             f.write("No relevant results")
 
-        f = open(f"yfinance_ticker/{csv_name}_data.csv", "w+")
+        f = open(f"yfinance_ticker/Data/{csv_name}_data.csv", "w+")
         f.write("Date;Close;Adj Close;Volume\n")
         for step in range(len(yfin_data)):
             date = str(yfin_data["Date"][step])[:10]
@@ -148,7 +193,6 @@ class Ticker:
             volume = yfin_data["Volume"][step]
             f.write(f'''{date};{close};{adj_close};{volume}\n''')
         f.close()
-
 
     @staticmethod
     def __calculate_chances(first_year):
@@ -159,7 +203,7 @@ class Ticker:
             call_chance = 0.75
             put_chance = 0.15
         else:
-            call_chance = -0.0000001245893 * difference ** 4 + 0.0000031596081 * difference ** 3 -\
+            call_chance = -0.0000001245893 * difference ** 4 + 0.0000031596081 * difference ** 3 - \
                           0.0000287171413 * difference ** 2 - 0.0033881195779 * difference + \
                           0.9997102044542
             put_chance = 0.0000000075278 * difference ** 4 + 0.0000008609729 * difference ** 3 + \

@@ -39,7 +39,7 @@ class Register_Page_ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
         // Set the background color
         view.backgroundColor = .systemBackground
         
@@ -147,13 +147,18 @@ class Register_Page_ViewController: UIViewController {
         scrollview_register_page.addSubview(passwordTextField)
         passwordTextField.frame  = CGRect(x: width*0.05, y: birthDatePicker.frame.maxY + height*0.025, width: width*0.9, height: height*0.06)
         
-        let visibilityButton = UIButton(type: .close)
-        visibilityButton.setImage(UIImage(named: "eye"), for: .normal)
-        visibilityButton.backgroundColor = .red
+        // Irgendwann noch ein neues bild hinzufügen ...
+        let visibilityButton = UIButton(type: .custom)
+        let button_image = UIImage(named: "unhide_eye")
+        let scaledImage = UIGraphicsImageRenderer(size: CGSize(width: passwordTextField.frame.height*0.7, height: passwordTextField.frame.height*0.7)).image { _ in
+            button_image?.draw(in: CGRect(x: 0, y: 0, width: passwordTextField.frame.height*0.7, height: passwordTextField.frame.height*0.7))
+        }
+        visibilityButton.setImage(scaledImage, for: .normal)
+        visibilityButton.contentMode = .scaleAspectFit
         visibilityButton.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
         
         passwordTextField.rightView = visibilityButton
-        passwordTextField.rightViewMode = .whileEditing
+        passwordTextField.rightViewMode = .always
         
         // Create the confirm password text field
         confirmPasswordTextField = UITextField()
@@ -169,6 +174,20 @@ class Register_Page_ViewController: UIViewController {
         scrollview_register_page.addSubview(confirmPasswordTextField)
         confirmPasswordTextField.frame  = CGRect(x: width*0.05, y: passwordTextField.frame.maxY + height*0.025, width: width*0.9, height: height*0.06)
         
+        // Irgendwann noch ein neues bild hinzufügen ...
+        let visibilityButton2 = UIButton(type: .custom)
+        let button_image2 = UIImage(named: "unhide_eye")
+        let scaledImage2 = UIGraphicsImageRenderer(size: CGSize(width: passwordTextField.frame.height*0.7, height: passwordTextField.frame.height*0.7)).image { _ in
+            button_image2?.draw(in: CGRect(x: 0, y: 0, width: passwordTextField.frame.height*0.7, height: passwordTextField.frame.height*0.7))
+        }
+        visibilityButton2.setImage(scaledImage2, for: .normal)
+        visibilityButton2.contentMode = .scaleAspectFit
+        visibilityButton2.addTarget(self, action: #selector(togglePasswordVisibility), for: .touchUpInside)
+        
+        
+        confirmPasswordTextField.rightView = visibilityButton2
+        confirmPasswordTextField.rightViewMode = .always
+        
         // Do not show the password, replace with dots
         passwordTextField.isSecureTextEntry = true
         // To be changed someday to newpassword
@@ -180,11 +199,42 @@ class Register_Page_ViewController: UIViewController {
         register_button = UIButton()
         register_button.setTitle("Register", for: .normal)
         register_button.backgroundColor = .systemBlue
-        register_button.addTarget(self, action: #selector(register_button_func), for: .touchUpInside)
+        // register_button.addTarget(self, action: #selector(register_button_func), for: .touchUpInside)
+        register_button.addTarget(self, action: #selector(try_animation), for: .touchUpInside)
         scrollview_register_page.addSubview(register_button)
         register_button.frame = CGRect(x: width*0.05, y: confirmPasswordTextField.frame.maxY + height*0.025, width: width*0.9, height: height*0.06)
         register_button.layer.cornerRadius = register_button.frame.height/8
         register_button.clipsToBounds = true
+        
+    }
+    
+    @objc func try_animation() {
+        
+        imageview_logo.isHidden = true
+        
+        navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        navigationController?.navigationBar.isHidden = true
+        
+        let coverview = UIView(frame: CGRect(x: 0, y: 0, width: 0, height: 1))
+        coverview.center = register_button.center
+        coverview.backgroundColor = .systemBlue
+        coverview.backgroundColor = .systemBackground
+        view.addSubview(coverview)
+        
+        UILabel.animate(withDuration: 1, delay: 0.5, animations: {
+            
+            coverview.frame = CGRect(x: 0, y: 0, width: height*3, height: height)
+            coverview.layer.cornerRadius = height/2
+            coverview.clipsToBounds = true
+            coverview.center = self.register_button.center
+            coverview.backgroundColor = .systemBackground
+            
+        }, completion: { _ in
+            
+            // removed the animation because i want to try to do it again
+            // was not as good as i wanted it to be
+            
+        })
         
     }
     
@@ -195,11 +245,11 @@ class Register_Page_ViewController: UIViewController {
     }
     
     @objc func keyboardWillShow(_ notification: Notification) {
-                
+        
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
             let keyboardHeight = keyboardRectangle.height
-                        
+            
             scrollview_register_page.contentSize = CGSize(width: width, height: height * 0.85 + keyboardHeight/2)
             
         }
@@ -207,7 +257,7 @@ class Register_Page_ViewController: UIViewController {
     }
     
     @objc func keyboardHides() {
-     
+        
         UIScrollView.animate(withDuration: 0.4, animations: {
             self.scrollview_register_page.contentSize = CGSize(width: width, height: height * 0.85)
         })
@@ -244,10 +294,6 @@ class Register_Page_ViewController: UIViewController {
                 let docRef = self!.database.document("userinfo/\(self!.user_id!)")
                 docRef.setData(["name": name, "username": username, "birthdate": birthdate, "mail": mail, "GTC": accept_gtc, "Risk": accept_risk])
                 
-                print(self!.user_id!)
-                
-                
-                
                 self!.present_Tabbar()
                 
             })
@@ -258,29 +304,22 @@ class Register_Page_ViewController: UIViewController {
         }
         
     }
-
+    
     
     func present_Tabbar() {
         
         // Create the view controller that you want to present modally
         let modalViewController = Main_UITabBarControllerViewController()
-
+        
         // Set the presentation style (optional)
         modalViewController.modalPresentationStyle = .overFullScreen
-
+        
         // Set the transition style (optional)
         modalViewController.modalTransitionStyle = .coverVertical
-
+        
         // Present the view controller modally
         present(modalViewController, animated: true, completion: nil)
         
     }
-    
-}
-
-enum CustomError: Error {
-    
-    case somethingWentWrong
-    case anotherError(reason: String)
     
 }

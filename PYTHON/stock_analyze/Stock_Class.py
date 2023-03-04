@@ -4,6 +4,7 @@ Creating a Class for the stocks
 import math
 import random
 from abc import ABC
+from collections import Counter
 
 import numpy as np
 from matplotlib import pyplot as plt
@@ -210,7 +211,7 @@ class Stock(Securities, Graph, ABC):
 
         # print(len(buy_or_not))
         if len(buy_or_not) > 10:
-            filtered = self.cluster_results(buy_or_not, 10, 20, first_year)
+            filtered = self.cluster_results(buy_or_not, 10, 50, first_year)
         else:
             filtered = None
 
@@ -248,7 +249,7 @@ class Stock(Securities, Graph, ABC):
 
             centos = [np.mean(cl, axis=0) for cl in clustered_points if cl != []]
 
-        self.visualize(points, centos)
+        # self.visualize(points, centos)
 
         result = []
         for cluster in clustered_points_val:
@@ -257,6 +258,8 @@ class Stock(Securities, Graph, ABC):
 
         for res in result:
             print(res[0])
+
+        result = self.most_common_date(result)
 
         return result
 
@@ -295,11 +298,55 @@ class Stock(Securities, Graph, ABC):
             for start, index in enumerate(current_lst[0][1]):
                 if start > (2022 - first_year - 25):
                     calc += (index[1]["course"] - index[0]["course"]) / index[0]["course"]
-                print(calc)
             return_value = current_lst[0]
             return_value[0].insert(1, calc)
 
         return return_value
+
+    def most_common_date(self, values):
+        """
+        Function to find the first buy date, cause this is the day where the analyze tried to
+        find the best values
+        :param values: Given values with best worth of analyze, finding most common days to buy
+        and sell
+        :argument as INFO --> please controll the results again before running it through
+        :return: Edits the values first and seconds dicts; Replace year with 3000; Clouse Course
+                    with 0 and the day and month with the min date
+        """
+
+        for index, val in enumerate(values):
+            months_buy, days_buy, months_sell, days_sell = [], [], [], []
+            for buy_date in val[1]:
+                months_buy.append(buy_date[0]["month"])
+                days_buy.append(buy_date[0]["day"])
+                months_sell.append(buy_date[1]["month"])
+                days_sell.append(buy_date[1]["day"])
+
+            combined_buy, combined_sell = [], []
+
+            for index_buy, month in enumerate(months_buy):
+                combined_buy.append((days_buy[index_buy], month))
+
+            for index_sell, month in enumerate(months_sell):
+                combined_sell.append((days_sell[index_sell], month))
+
+            count_combined_buy = Counter(tuple(sub_arr) for sub_arr in combined_buy)
+            most_common_buy = count_combined_buy.most_common(1)[0]
+
+            count_combined_sell = Counter(tuple(sub_arr) for sub_arr in combined_sell)
+            most_common_sell = count_combined_sell.most_common(1)[0]
+
+            values[index][0][2]["day"] = most_common_buy[0][0]
+            values[index][0][2]["month"] = most_common_buy[0][1]
+            values[index][0][2]["year"] = 1009
+            values[index][0][2]["closing_course"] = 0.0
+
+            values[index][0][3]["day"] = most_common_sell[0][0]
+            values[index][0][3]["month"] = most_common_sell[0][1]
+            values[index][0][3]["year"] = 1009
+            values[index][0][3]["closing_course"] = 0.0
+
+        return values
 
     @staticmethod
     def evaluate_date_differences(distance):
