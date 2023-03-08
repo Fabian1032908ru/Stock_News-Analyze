@@ -52,6 +52,7 @@ class Ticker:
                 data = yf.download("AAPL", '1970-01-01', '2023-12-31')
             except KeyError:
                 print("Not Stock found on yfinance")
+                continue
             data = data.reset_index()  # len data will be 0 if there is no available data
             if index > 50:
                 exit()
@@ -74,17 +75,17 @@ class Ticker:
             date = str(yfin_data["Date"][step])[:10]
             res.append([date, float(yfin_data["Close"][step])])
 
-        test1 = Stock(ticker)
-        final_val = test1.get_closing_courses_if_yahoo(res)
-        final_val = test1.convert_str_to_int(final_val)
+        current_stock = Stock(ticker)
+        final_val = current_stock.get_closing_courses_if_yahoo(res)
+        final_val = current_stock.convert_str_to_int(final_val)
         final_val = final_val[::-1]
-        first_year = test1.get_first_year(final_val)
+        first_year = current_stock.get_first_year(final_val)
         chances = self.__calculate_chances(first_year)
         if first_year < 2015:
             call_chance, put_chance = chances[0], chances[1]
-            result = test1.analyse_data_day_comparison(final_val, first_year,
-                                                       call_chance=call_chance,
-                                                       put_chance=put_chance)
+            result = current_stock.analyse_data_day_comparison(final_val, first_year,
+                                                               call_chance=call_chance,
+                                                               put_chance=put_chance)
 
             self.__write_analyze_csv(result, ticker, first_year, yfin_data)
             self.__write_analyze_csv_buy_day_based(result, ticker, first_year)

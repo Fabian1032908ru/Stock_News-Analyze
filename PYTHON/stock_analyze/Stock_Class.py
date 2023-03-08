@@ -249,7 +249,7 @@ class Stock(Securities, Graph, ABC):
 
             centos = [np.mean(cl, axis=0) for cl in clustered_points if cl != []]
 
-        # self.visualize(points, centos)
+            # self.visualize(points, centos)
 
         result = []
         for cluster in clustered_points_val:
